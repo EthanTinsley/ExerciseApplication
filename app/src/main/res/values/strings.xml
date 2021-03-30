@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">FinalExerciseApplication</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="shannon_sosebee">Tab 3</string>
-    <string name="anthony_woodall">Tab 4</string>
-    <string name="ethan_tinsley">Tab 5</string>
+    <string name="shannon_sosebee">Shannon Sosbee</string>
+    <string name="anthony_woodall">Anthony Woodall</string>
+    <string name="ethan_tinsley">Ethan Tinsley</string>
     <string name="MainPageTitle">Insert the name of the App here! </string>
     <string name="StartWorkoutButton">Start Workout!</string>
     <string name="BuildWorkoutButton">Build a Workout!</string>
