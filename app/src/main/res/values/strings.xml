@@ -32,7 +32,8 @@
 
     <string name="ViewCompletedWorkout">View Workout</string>
 
-    -- Strings that are used in the workout descriptions -- -- can probably be deleted later on after implementation
+    -- Strings that are used in the workout descriptions -- -- can probably be deleted later on
+    after implementation
     <string name="CompletedWorkout01Information">Workout time and exercise count goes here for workout 01 </string>
     <string name="CompletedWorkout02Information">Workout time and exercise count goes here for workout 02</string>
     <string name="CompletedWorkout03Information">Workout time and exercise count goes here for workout 03</string>
@@ -43,7 +44,6 @@
     <string name="CompletedWorkout08Information">Workout time and exercise count goes here for workout 08</string>
     <string name="CompletedWorkout09Information">Workout time and exercise count goes here for workout 09</string>
     <string name="CompletedWorkout10Information">Workout time and exercise count goes here for workout 10 </string>
-
 
 
 </resources>
