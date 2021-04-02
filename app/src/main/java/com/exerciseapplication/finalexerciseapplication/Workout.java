@@ -12,7 +12,7 @@ package com.exerciseapplication.finalexerciseapplication;
 // Workout method should be able to insert a new exercise to the workout ( override to accept a specific position , default to end of workout )
 // Workout should have a previous, current, next exercise ( regardless of array or linked list )
 // Workout should have a title
-// Workout should have a boolean to track status ( Active , Exercise )
+// Workout should have a boolean to track status ( Active , Completed )
 // Workout should have a variable to track how long workout lasts
 // Workout should have a date field that is filled in when a workout starts
 
