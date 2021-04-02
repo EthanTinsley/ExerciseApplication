@@ -18,8 +18,7 @@ package com.exerciseapplication.finalexerciseapplication;
 
 public class Workout {
 
-
-
-
+public Workout() {
+}
 
 }

@@ -14,5 +14,7 @@ package com.exerciseapplication.finalexerciseapplication;
 
 public class Exercise {
 
+    public Exercise() {
+    }
 
 }
