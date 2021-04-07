@@ -1,24 +1,152 @@
 package com.exerciseapplication.finalexerciseapplication;
 
-// This class will store the workout object that is referenced and used throughout the rest of the app.
-// Class should contain a way to store an ?? Unlimited amount of exercises ?? in a linked list.
-// Alternatively could use an Array for easier manipulation and referencing. Must declare a size however.
-// -- Reguardless of Data Structure --
-// Workout object should hold a collection of exercises that can use defined methods
-// Workout method should be able to go to the next exercise in the order
-// Workout method should be able to recall the previous exercise
-// Workout method should allow the repositioning of exercises ( reordering )
-// Workout method should allow the deletion and reordering ( fill the null slot ) of an exercise
-// Workout method should be able to insert a new exercise to the workout ( override to accept a specific position , default to end of workout )
-// Workout should have a previous, current, next exercise ( regardless of array or linked list )
-// Workout should have a title
-// Workout should have a boolean to track status ( Active , Completed )
-// Workout should have a variable to track how long workout lasts
-// Workout should have a date field that is filled in when a workout starts
+import java.util.*;
 
 public class Workout {
+	
+	
+	private String Title ;
+	private int WorkoutID ;
+	private boolean completed ;
+	private String dateDay , dateMonth , dateYear ;
+	private LinkedList <Exercise> ExerciseList = new LinkedList();
+	private ListIterator<Exercise> iterator ;
+	
+	
+	public Workout(String Title) {
+		
+		this.Title = Title ;
+		
+	}
 
-public Workout() {
-}
+	public boolean addExercise(Exercise newExercise) {
+		
+		if(ExerciseList.contains(newExercise) != true) return ExerciseList.add(newExercise);
+		else return false ;
+		
+	}
+	
+	public boolean removeExercise(Exercise Exercise) {
+		
+		return ExerciseList.remove(Exercise);
+		
+	}
+	
+	public boolean swapPositions(Exercise Exercise01 , Exercise Exercise02) {
+
+		if ( ExerciseList.contains(Exercise01) && ExerciseList.contains(Exercise02) ) {
+			
+			int index01 = ExerciseList.indexOf(Exercise01);
+			int index02 = ExerciseList.indexOf(Exercise02);
+		
+			ExerciseList.add(index02, Exercise01);
+			ExerciseList.add(index01, Exercise02);
+		
+			return true ;
+		
+		}
+		else return false ;
+	}
+	
+	public int getPosition(Exercise Exercise) {
+		
+		int index = ExerciseList.indexOf(Exercise) ;
+		
+		return index ;
+	}
+	
+	public int getSize() {
+		
+		return ExerciseList.size() ;
+	}
+	
+	public int getCurrentIndex() {
+		return iterator.nextIndex() - 1 ;
+	}
+	
+	public boolean startWorkout() {
+		iterator = ExerciseList.listIterator() ;
+		return true ;
+	}
+	
+	
+	public boolean hasNext() {
+		if (iterator.hasNext() == true ) return true ;
+		else return false ;
+	}
+	
+	public Exercise nextExercise() {
+		if ( iterator.hasNext() == true ) return iterator.next();
+		else return null  ;
+	}
+	
+	public boolean hasPrevious() {
+		if (iterator.hasPrevious() == true ) return true ;
+		else return false ;
+	}
+	
+	public Exercise previousExercise() {
+		if (iterator.previousIndex() != -1) return iterator.previous() ;
+		else return null ;
+	}
+	
+	
+	public String getTitle() {
+		return Title;
+	}
+
+	public void setTitle(String title) {
+		Title = title;
+	}
+
+	public int getWorkoutID() {
+		return WorkoutID;
+	}
+
+	public void setWorkoutID(int workoutID) {
+		WorkoutID = workoutID;
+	}
+
+	public boolean isCompleted() {
+		return completed;
+	}
+
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
+	}
+
+	public String getDateDay() {
+		return dateDay;
+	}
+
+	public void setDateDay(String dateDay) {
+		this.dateDay = dateDay;
+	}
+
+	public String getDateMonth() {
+		return dateMonth;
+	}
+
+	public void setDateMonth(String dateMonth) {
+		this.dateMonth = dateMonth;
+	}
+
+	public String getDateYear() {
+		return dateYear;
+	}
+
+	public void setDateYear(String dateYear) {
+		this.dateYear = dateYear;
+	}
+
+	public LinkedList<Exercise> getExerciseList() {
+		return ExerciseList;
+	}
+
+	public void setExerciseList(LinkedList<Exercise> exerciseList) {
+		ExerciseList = exerciseList;
+	}
+	
+	
 
 }
