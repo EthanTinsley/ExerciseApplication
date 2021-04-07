@@ -17,7 +17,8 @@
     <string name="NextButton">Next Page</string>
 
     -- Strings used in completed workouts activities --
-    -- Strings that are used as workout titles -- -- Can also probably be deleted after data storage implementation 
+    -- Strings that are used as workout titles -- -- Can also probably be deleted after data storage
+    implementation
     <string name="CompletedWorkoutsTitle">Completed Workouts</string>
     <string name="CompletedWorkout01">Most Previous workout title goes here</string>
     <string name="CompletedWorkout02">2nd Most Previous workout goes here</string>
