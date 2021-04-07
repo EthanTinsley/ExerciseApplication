@@ -1,20 +1,77 @@
 package com.exerciseapplication.finalexerciseapplication;
 
-// Exercise's are the cornerstone of the application
-// Will be the Object that is stored inside the Workout Object
-// Needs to contain the following:
-// An exercise Name       ** Required **
-// A Muscle Group that the exercise targets
-// A description of the exercise
-// A image / demonstration of the exercise // Will need to be the name of image as objects cannot store images
-// A potential link to a video showing the exercise ** bonus not needed **
-// A rep count - Will be manipulated by user
-// A set count - Will be manipulated by user
-
-
 public class Exercise {
+	
+	public int  repCount , setCount ;
+	public String name , description , imageName , muscleGroup , ID  ;
+	
+	
+	public Exercise(String name ) {
+		
+		this.name = name ;
+		
+	}
 
-    public Exercise() {
-    }
 
+	
+	//Appropriate Getters and Setters for Exercise Class 
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		this.ID = iD;
+	}
+
+	public int getRepCount() {
+		return repCount;
+	}
+
+	public void setRepCount(int repCount) {
+		this.repCount = repCount;
+	}
+
+	public int getSetCount() {
+		return setCount;
+	}
+
+	public void setSetCount(int setCount) {
+		this.setCount = setCount;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}
+
+	public String getMuscleGroup() {
+		return muscleGroup;
+	}
+
+	public void setMuscleGroup(String muscleGroup) {
+		this.muscleGroup = muscleGroup;
+	}
+	
+	public String toString() {
+		return name ;
+	}
 }
