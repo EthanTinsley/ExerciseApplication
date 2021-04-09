@@ -15,7 +15,7 @@
     -- Strings for next and back buttons --
     <string name="BackButton">Previous Page</string>
     <string name="NextButton">Next Page</string>
-
+    <string name="AddExercise">Add Exercise</string>
     -- Strings used in completed workouts activities --
     -- Strings that are used as workout titles -- -- Can also probably be deleted after data storage
     implementation
