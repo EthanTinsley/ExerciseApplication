@@ -4,10 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BuildWorkoutsMuscleGroup">
+    tools:context=".ShoulderExercises">
 
     <Button
-        android:id="@+id/buildMuscleBackBtn"
+        android:id="@+id/buildMuscleNextBtn2"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/NextButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
+
+    <Button
+        android:id="@+id/buildMuscleBackBtn2"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -19,125 +31,82 @@
         app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
 
     <TextView
-        android:id="@+id/selectMuscle"
+        android:id="@+id/shldrExercisesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
-        android:text="Please select muscle group:"
+        android:text="Shoulder Exercises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/shldrsBtn"
+        android:id="@+id/seatWeightedPressBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Shoulders"
+        android:text="Seated Overhead Weighted Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectMuscle" />
+        app:layout_constraintTop_toBottomOf="@+id/shldrExercisesTextView" />
 
     <Button
-        android:id="@+id/bicepsBtn"
+        android:id="@+id/wtdLatRaisesBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Biceps"
+        android:text="Weighted Lateral Raises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shldrsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/seatWeightedPressBtn" />
 
     <Button
-        android:id="@+id/tricepsBtn"
+        android:id="@+id/wtdFrontRaisesBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Triceps"
+        android:text="Weighted Front Raises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bicepsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/wtdLatRaisesBtn" />
 
     <Button
-        android:id="@+id/forearmBtn"
+        android:id="@+id/wtdUprightRowsBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Forearm"
+        android:text="Weighted Upright Rows"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tricepsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/wtdFrontRaisesBtn" />
 
     <Button
-        android:id="@+id/chestBtn"
+        android:id="@+id/arnldPressBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Chest"
+        android:text="Arnold Press"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forearmBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/wtdUprightRowsBtn" />
 
     <Button
-        android:id="@+id/backBtn"
+        android:id="@+id/wtdRearDeltRaisesBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Back"
+        android:text="Weighted Rear Delt Raises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chestBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/arnldPressBtn" />
 
     <Button
-        android:id="@+id/absBtn"
+        android:id="@+id/stndWtdPressBtn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Abdominals"
+        android:text="Standing Overhead Weighted Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backBtn" />
-
-    <Button
-        android:id="@+id/glutesBtn"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Glutes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/absBtn" />
-
-    <Button
-        android:id="@+id/hmstrngBtn"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Hamstrings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/glutesBtn" />
-
-    <Button
-        android:id="@+id/clvsBtn"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Calves"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hmstrngBtn" />
-
-    <Button
-        android:id="@+id/buildMuscleNextBtn"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/NextButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
+        app:layout_constraintTop_toBottomOf="@+id/wtdRearDeltRaisesBtn" />
 </android.support.constraint.ConstraintLayout>
