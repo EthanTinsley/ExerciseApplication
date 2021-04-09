@@ -18,9 +18,19 @@ public class MainActivity extends AppCompatActivity {
         CompletedWorkouts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent CompletedWorkoutsIntent = new Intent(view.getContext() , CompletedWorkouts .class) ;
+                Intent CompletedWorkoutsIntent = new Intent(view.getContext() , CompletedWorkouts.class) ;
                 startActivityForResult(CompletedWorkoutsIntent, 0);
             }
         });
+
+        Button BrowseExercise = (Button) findViewById(R.id.BrowseExercisesButton);
+        BrowseExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent BrowseExerciseIntent = new Intent(view.getContext(), MuscleGroupSelection.class) ;
+                startActivityForResult(BrowseExerciseIntent, 0);
+            }
+        });
+
     }
 }

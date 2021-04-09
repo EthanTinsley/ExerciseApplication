@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CompletedWorkouts extends AppCompatActivity {
+public class MuscleGroupSelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_completed_workouts);
+        setContentView(R.layout.activity_muscle_group_selection);
 
-        Button BackButton = (Button) findViewById(R.id.CompletedWorkouts01BackButton) ;
+        Button BackButton = (Button) findViewById(R.id.buildMuscleBackBtn) ;
         BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -22,5 +22,6 @@ public class CompletedWorkouts extends AppCompatActivity {
 
             }
         });
+
     }
 }

@@ -11,7 +11,7 @@
         android:theme="@style/Theme.FinalExerciseApplication">
         <activity android:name=".ExerciseAddTemplate"></activity>
         <activity android:name=".ShoulderExercises" />
-        <activity android:name=".BuildWorkoutsMuscleGroup" />
+        <activity android:name=".MuscleGroupSelection" />
         <activity android:name=".CompletedWorkouts" />
         <activity android:name=".MainActivity">
             <intent-filter>
