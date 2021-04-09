@@ -32,5 +32,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button BuildWorkoutButton = (Button) findViewById(R.id.BuildWorkoutButton);
+        BuildWorkoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent BuildWorkoutIntent = new Intent(view.getContext(), BuildWorkoutScreen.class) ;
+                startActivityForResult(BuildWorkoutIntent, 0);
+            }
+        });
+
+
     }
 }

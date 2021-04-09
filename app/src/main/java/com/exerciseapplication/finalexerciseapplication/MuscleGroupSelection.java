@@ -8,6 +8,8 @@ import android.widget.Button;
 
 public class MuscleGroupSelection extends AppCompatActivity {
 
+    boolean buildingWorkout  = true ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,11 +19,23 @@ public class MuscleGroupSelection extends AppCompatActivity {
         BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent BackIntent = new Intent(view.getContext(), MainActivity.class) ;
+                Intent BackIntent = null ;
+                if ( buildingWorkout == true ){
+                    BackIntent = new Intent(view.getContext(), BuildWorkoutScreen.class) ;
+                }
+                else BackIntent = new Intent(view.getContext(), MainActivity.class) ;
                 startActivityForResult(BackIntent,0);
-
             }
         });
 
+
+        Button MuscleSelectBtn01 = (Button) findViewById(R.id.MuscleSelectBtn01);
+        MuscleSelectBtn01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent SelectExercise = new Intent(view.getContext(), ExerciseSelectionScreen.class) ;
+                startActivityForResult(SelectExercise, 0);
+            }
+        });
     }
 }

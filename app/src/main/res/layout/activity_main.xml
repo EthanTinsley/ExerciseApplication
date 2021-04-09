@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/ApplicationTitle"
+        android:id="@+id/BuildWorkoutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/startWorkoutButton"
+        android:id="@+id/AddExerciseButton"
         android:layout_width="235dp"
         android:layout_height="55dp"
         android:layout_marginStart="100dp"
@@ -29,7 +29,7 @@
         android:text="@string/StartWorkoutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ApplicationTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/BuildWorkoutTitle" />
 
     <Button
         android:id="@+id/BuildWorkoutButton"
@@ -41,7 +41,7 @@
         android:text="@string/BuildWorkoutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startWorkoutButton" />
+        app:layout_constraintTop_toBottomOf="@+id/AddExerciseButton" />
 
     <Button
         android:id="@+id/ViewWorkoutsButton"

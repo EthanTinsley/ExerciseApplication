@@ -12,6 +12,12 @@
     <string name="PreviousWorkoutsButton">Previous Workouts</string>
     <string name="BrowseExercisesButton">Browse Available Exercises!</string>
 
+    strings used in build workout activity
+    <string name="BuildExerciseTitle">Build a New Workout</string>
+    <string name="AddAnExercise"> Add a new Exercise to the Workout</string>
+    <string name="SaveTheWorkout">Save New Workout </string>
+    <string name="UserInputTitle">New Workout Title: </string>
+
     -- Strings for next and back buttons --
     <string name="BackButton">Previous Page</string>
     <string name="NextButton">Next Page</string>
