@@ -19,6 +19,7 @@ public class BuildWorkoutScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent BuildWorkoutIntent = new Intent(view.getContext(), MuscleGroupSelection.class) ;
+                BuildWorkoutIntent.putExtra("BuildingWorkout", true) ;
                 startActivityForResult(BuildWorkoutIntent, 0);
             }
         });

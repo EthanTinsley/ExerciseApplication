@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent BrowseExerciseIntent = new Intent(view.getContext(), MuscleGroupSelection.class) ;
+                BrowseExerciseIntent.putExtra("BuildingWorkout" , false ) ;
                 startActivityForResult(BrowseExerciseIntent, 0);
             }
         });

@@ -8,12 +8,13 @@ import android.widget.Button;
 
 public class MuscleGroupSelection extends AppCompatActivity {
 
-    boolean buildingWorkout  = true ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muscle_group_selection);
+
+        boolean buildingWorkout  = getIntent().getBooleanExtra("BuildingWorkout", false) ;
 
         Button BackButton = (Button) findViewById(R.id.buildMuscleBackBtn) ;
         BackButton.setOnClickListener(new View.OnClickListener() {
