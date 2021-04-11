@@ -61,7 +61,45 @@
     <string name="Pushups">Chest Press</string>
     <string name="PushupsDescription">Chest Press</string>
 
-    Strings for
+    Strings for forearms
+
+    <string name="BarbellHolds">Barbell Holds</string>
+
+    <string name="HandGripper">Hand Gripper </string>
+
+    <string name="PlatePinch">Plate Pinch</string>
+
+    <string name="FarmersCarries">Farmer Carries</string>
+
+    Strings for Triceps
+
+    <string name="DumbellTricepExtensions">Dumbell Tricep Extensions </string>
+
+    <string name="MachineTricepExtensions">Machine Tricep Extensions</string>
+
+    <string name="Dips">Dips </string>
+
+    <string name="SeatedTricepPress">Seated Tricep Press</string>
+
+    <string name="TricepCablePushdowns">Tricep Cable Pushdowns </string>
+
+    <string name="SkullCrushers">Skull Crushers </string>
+
+    Strings for Shoulders
+
+    <string name="SeatedOverheadWeightedPress">SeatedOverheadWeightedPress</string>
+
+    <string name="WeightedLateralRises">Weighted Lateral Rises </string>
+
+    <string name="WeightedFrontRaises">Weighted Front Raises </string>
+
+    <string name="WeightedUprightRows">Weighted Upright Rows</string>
+
+    <string name="AronoldPress">Arnold Press </string>
+
+    <string name="WeightedRearDeltRaises">Weighted Rear Delt Raises </string>
+
+    <string name="StandingOverheadWeightedPress">Standing Overhead Weighted Press</string>
 
 
 

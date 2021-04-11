@@ -6,30 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ShoulderExercises">
 
-    <Button
-        android:id="@+id/buildMuscleNextBtn2"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/NextButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
-
-    <Button
-        android:id="@+id/buildMuscleBackBtn2"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/BackButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
-
     <TextView
         android:id="@+id/ShoulderExercisesTitle"
         android:layout_width="wrap_content"
@@ -45,7 +21,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Seated Overhead Weighted Press"
+        android:text="@string/SeatedOverheadWeightedPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ShoulderExercisesTitle" />
@@ -55,7 +31,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Weighted Lateral Raises"
+        android:text="@string/WeightedLateralRises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seatWeightedPressButton" />
@@ -65,7 +41,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Weighted Front Raises"
+        android:text="@string/WeightedFrontRaises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wtdLatRaisesButton" />
@@ -75,7 +51,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Weighted Upright Rows"
+        android:text="@string/WeightedUprightRows"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wtdFrontRaisesButton" />
@@ -85,7 +61,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Arnold Press"
+        android:text="@string/AronoldPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wtdUprightRowsButton" />
@@ -95,7 +71,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Weighted Rear Delt Raises"
+        android:text="@string/WeightedRearDeltRaises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/arnldPressButton" />
@@ -105,7 +81,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Standing Overhead Weighted Press"
+        android:text="@string/StandingOverheadWeightedPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wtdRearDeltRaisesButton" />

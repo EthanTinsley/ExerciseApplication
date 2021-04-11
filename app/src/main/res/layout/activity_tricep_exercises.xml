@@ -11,7 +11,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Skull Crushers"
+        android:text="@string/SkullCrushers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tricepcablepushdownsButton" />
@@ -21,7 +21,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Tricep Cable Pushdowns"
+        android:text="@string/TricepCablePushdowns"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/seatedtripressButton" />
@@ -31,7 +31,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Seated Tricep Press"
+        android:text="@string/SeatedTricepPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dipsbutton" />
@@ -41,7 +41,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Dips"
+        android:text="@string/Dips"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/machinetriextButton" />
@@ -51,7 +51,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Machine Tricep Extensions"
+        android:text="@string/MachineTricepExtensions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dumbelltricepextensionsButton" />
@@ -61,7 +61,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Dumbbell Tricep Extensions"
+        android:text="@string/DumbellTricepExtensions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/TricepexercisesTitle" />
