@@ -18,10 +18,102 @@
     <string name="SaveTheWorkout">Save New Workout </string>
     <string name="UserInputTitle">New Workout Title: </string>
 
+    Strings for Muscle Groups
+    <string name="Shoulders">Shoulders</string>
+    <string name="Bicep">Biceps</string>
+    <string name="Tricep">Triceps</string>
+    <string name="Forearm">Forearms</string>
+    <string name="Chest">Chest</string>
+    <string name="Back">Back</string>
+    <string name="Abdominal">Abdominal</string>
+    <string name="Glutes">Glutes</string>
+    <string name="Hamstrings">Hamstrings</string>
+    <string name="Calves">Calves</string>
+
+    Strings for Chest Exercises
+    <string name="BenchPress">Barbell Bench Press</string>
+    <string name="BenchPressDescription">BarbellBenchPress</string>
+
+    <string name="InclineBenchPress">InclineBenchPress</string>
+    <string name="InclineBenchPressDescription">Incline BenchPress</string>
+
+    <string name="DeclineBenchPress">Decline Bench Press</string>
+    <string name="DeclineBenchPressDescription">Decline Bench Press</string>
+
+    <string name="CableFly">Cable Flys</string>
+    <string name="CableFlyDescription">Cable Flys</string>
+
+    <string name="DumbellBenchPress">Dumbell Bench Press</string>
+    <string name="DumbellBenchPressDescription">Dumbell Bench Press</string>
+
+    <string name="DeclineDumbellBenchPress">Decline Dumbell Bench Press</string>
+    <string name="DeclineDumbellBenchPressDescription">Dumbell Bench Press</string>
+
+    <string name="InclineDumbellBenchPress">Incline Dumbell Bench Press</string>
+    <string name="InclineDumbellBenchPressDescription">Dumbell Bench Press</string>
+
+    <string name="DumbellFly">Dumbell Flys</string>
+    <string name="DumbellFlyDescription">Dumbell Flys</string>
+
+    <string name="ChestPress">Chest Press</string>
+    <string name="ChestPressDescription">Chest Press</string>
+
+    <string name="Pushups">Chest Press</string>
+    <string name="PushupsDescription">Chest Press</string>
+
+    Strings for
+
+
+
+    Strings for Bicep Exercises
+    <string name="DumbellCurls">DumbellCurls</string>
+    <string name="DumbellCurlDescription">Description Goes Here </string>
+
+    <string name="MachineDumbellCurls">Machine Dumbell Curls</string>
+    <string name="MachineDumbellCurlsDescription">Machine Dumbell Curls</string>
+
+    <string name="InclineDumbellCurls">Incline Dumbell Curls</string>
+    <string name="InclineDumbellCurlsDescription">Incline Dumbell Curls</string>
+
+    <string name="SittingPreacherCurls">Machine Dumbell Curls</string>
+    <string name="SittingPreacherCurlsDescription">Machine Dumbell Curls</string>
+
+    <string name="StrictPreacherCurls">Incline Dumbell Curls</string>
+    <string name="StrictPreacherCurlsDescription">Incline Dumbell Curls</string>
+
+
+
+
     -- Strings for next and back buttons --
     <string name="BackButton">Previous Page</string>
     <string name="NextButton">Next Page</string>
     <string name="AddExercise">Add Exercise</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -- Ignore this --
     -- Strings used in completed workouts activities --
     -- Strings that are used as workout titles -- -- Can also probably be deleted after data storage
     implementation

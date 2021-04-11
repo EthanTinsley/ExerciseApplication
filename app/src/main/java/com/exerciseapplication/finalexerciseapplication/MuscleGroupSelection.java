@@ -16,18 +16,7 @@ public class MuscleGroupSelection extends AppCompatActivity {
 
         boolean buildingWorkout  = getIntent().getBooleanExtra("BuildingWorkout", false) ;
 
-        Button BackButton = (Button) findViewById(R.id.buildMuscleBackBtn) ;
-        BackButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent BackIntent = null ;
-                if ( buildingWorkout == true ){
-                    BackIntent = new Intent(view.getContext(), BuildWorkoutScreen.class) ;
-                }
-                else BackIntent = new Intent(view.getContext(), MainActivity.class) ;
-                startActivityForResult(BackIntent,0);
-            }
-        });
+
 
 
 
