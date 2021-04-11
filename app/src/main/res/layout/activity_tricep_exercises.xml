@@ -7,64 +7,64 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/skullcrush"
+        android:id="@+id/skullcrusherButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Skull Crushers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tripush" />
+        app:layout_constraintTop_toBottomOf="@id/tricepcablepushdownsButton" />
 
     <Button
-        android:id="@+id/tripush"
+        android:id="@+id/tricepcablepushdownsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Tricep Cable Pushdowns"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/seatedtripress" />
+        app:layout_constraintTop_toBottomOf="@id/seatedtripressButton" />
 
     <Button
-        android:id="@+id/seatedtripress"
+        android:id="@+id/seatedtripressButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Seated Tricep Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dips" />
+        app:layout_constraintTop_toBottomOf="@id/dipsbutton" />
 
     <Button
-        android:id="@+id/dips"
+        android:id="@+id/dipsbutton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Dips"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/machinetriext" />
+        app:layout_constraintTop_toBottomOf="@id/machinetriextButton" />
 
     <Button
-        android:id="@+id/machinetriext"
+        android:id="@+id/machinetriextButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Machine Tricep Extensions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tricepextensions" />
+        app:layout_constraintTop_toBottomOf="@id/dumbelltricepextensionsButton" />
 
     <Button
-        android:id="@+id/tricepextensions"
+        android:id="@+id/dumbelltricepextensionsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Dumbbell Tricep Extensions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Tricepexercises" />
+        app:layout_constraintTop_toBottomOf="@id/TricepexercisesTitle" />
 
     <Button
         android:id="@+id/prevtricep"
@@ -76,7 +76,7 @@
         android:text="Previous Page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Tricepexercises"
+        app:layout_constraintTop_toBottomOf="@id/TricepexercisesTitle"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -89,11 +89,11 @@
         android:text="Next Page"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Tricepexercises"
+        app:layout_constraintTop_toBottomOf="@id/TricepexercisesTitle"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/Tricepexercises"
+        android:id="@+id/TricepexercisesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"

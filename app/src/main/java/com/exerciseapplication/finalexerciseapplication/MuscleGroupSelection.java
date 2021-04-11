@@ -30,13 +30,7 @@ public class MuscleGroupSelection extends AppCompatActivity {
         });
 
 
-        Button MuscleSelectBtn01 = (Button) findViewById(R.id.MuscleSelectBtn01);
-        MuscleSelectBtn01.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent SelectExercise = new Intent(view.getContext(), ExerciseSelectionScreen.class) ;
-                startActivityForResult(SelectExercise, 0);
-            }
-        });
+
+       
     }
 }

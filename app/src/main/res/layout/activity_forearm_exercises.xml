@@ -6,37 +6,37 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/farmcarry"
+        android:id="@+id/FarmerscarryTitle"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Farmers Carries"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/platepinch" />
+        app:layout_constraintTop_toBottomOf="@id/PlatePinchButton" />
 
     <Button
-        android:id="@+id/platepinch"
+        android:id="@+id/PlatePinchButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Plate Pinch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/handgrip" />
+        app:layout_constraintTop_toBottomOf="@id/HandGripButton" />
 
     <Button
-        android:id="@+id/handgrip"
+        android:id="@+id/HandGripButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Hand Gripper"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barbhold" />
+        app:layout_constraintTop_toBottomOf="@id/BarbellHoldsButton" />
 
     <Button
-        android:id="@+id/barbhold"
+        android:id="@+id/BarbellHoldsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

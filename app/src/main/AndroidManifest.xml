@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalExerciseApplication">
         <activity android:name=".BuildWorkoutScreen"></activity>
-        <activity android:name=".ExerciseSelectionScreen" />
         <activity android:name=".ExerciseAddTemplate" />
         <activity android:name=".ShoulderExercises" />
         <activity android:name=".MuscleGroupSelection" />

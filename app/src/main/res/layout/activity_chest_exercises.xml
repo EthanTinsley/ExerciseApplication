@@ -7,126 +7,110 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/chest10"
+        android:id="@+id/PushupsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Pushups"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chest9" />
+        app:layout_constraintTop_toBottomOf="@id/ChestPressButton" />
 
     <Button
-        android:id="@+id/chest9"
+        android:id="@+id/ChestPressButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Chest Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chest8" />
+        app:layout_constraintTop_toBottomOf="@id/DumbellFlyButton" />
 
     <Button
-        android:id="@+id/chest8"
+        android:id="@+id/DumbellFlyButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Dumbbell Fly"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chest7" />
+        app:layout_constraintTop_toBottomOf="@id/InclineDumbellButton" />
 
     <Button
-        android:id="@+id/chest7"
+        android:id="@+id/InclineDumbellButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Incline Dumbbell Bench Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cheset6" />
+        app:layout_constraintTop_toBottomOf="@id/DeclineDumbellButton" />
 
     <Button
-        android:id="@+id/cheset6"
+        android:id="@+id/DeclineDumbellButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Decline Dumbbell Bench Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chest5" />
+        app:layout_constraintTop_toBottomOf="@id/DumbellBenchButton" />
 
     <Button
-        android:id="@+id/chest5"
+        android:id="@+id/DumbellBenchButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Dumbbell Bench Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chst4" />
+        app:layout_constraintTop_toBottomOf="@id/CableFlyButton" />
 
     <Button
-        android:id="@+id/chest3"
+        android:id="@+id/InclineBenchButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Incline Barbbell Bench Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cheset2" />
+        app:layout_constraintTop_toBottomOf="@id/DeclineBenchButton" />
 
     <Button
-        android:id="@+id/cheset2"
+        android:id="@+id/DeclineBenchButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Decline Barbbell Bench Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chest1" />
+        app:layout_constraintTop_toBottomOf="@id/BenchButton" />
 
     <Button
-        android:id="@+id/chst4"
+        android:id="@+id/CableFlyButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Cable Fly"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chest3" />
+        app:layout_constraintTop_toBottomOf="@id/InclineBenchButton" />
 
     <Button
-        android:id="@+id/chest1"
+        android:id="@+id/BenchButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Barbell Bench Press"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/exerciseSelectionTitle" />
-
-    <Button
-        android:id="@+id/ExerciseSlelectionBack"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Previous Page"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <Button
-        android:id="@+id/ExerciseSelectionNext"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Next Page"
-        app:layout_constraintStart_toEndOf="@+id/ExerciseSlelectionBack"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintTop_toBottomOf="@id/ChestTitle" />
 
     <TextView
-        android:id="@+id/exerciseSelectionTitle"
+        android:id="@+id/ChestTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="35dp"
         android:text="Chest Exercises"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

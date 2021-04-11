@@ -6,20 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MuscleGroupSelection">
 
-    <Button
-        android:id="@+id/buildMuscleBackBtn"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/BackButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
-
     <TextView
-        android:id="@+id/selectMuscle"
+        android:id="@+id/selectMuscleTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -29,47 +17,47 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn01"
+        android:id="@+id/ShouldersButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Shoulders"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectMuscle" />
+        app:layout_constraintTop_toBottomOf="@+id/selectMuscleTitle" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn02"
+        android:id="@+id/BicepButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Biceps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn01" />
+        app:layout_constraintTop_toBottomOf="@+id/ShouldersButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn03"
+        android:id="@+id/TricepButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Triceps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn02" />
+        app:layout_constraintTop_toBottomOf="@+id/BicepButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn04"
+        android:id="@+id/ForearmButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Forearm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn03" />
+        app:layout_constraintTop_toBottomOf="@+id/TricepButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn05"
+        android:id="@+id/ChestButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -77,67 +65,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn04" />
+        app:layout_constraintTop_toBottomOf="@+id/ForearmButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn06"
+        android:id="@+id/BackButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn05" />
+        app:layout_constraintTop_toBottomOf="@+id/ChestButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn07"
+        android:id="@+id/AbdominalsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Abdominals"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn06" />
+        app:layout_constraintTop_toBottomOf="@+id/BackButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn08"
+        android:id="@+id/GlutesButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Glutes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn07" />
+        app:layout_constraintTop_toBottomOf="@+id/AbdominalsButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn09"
+        android:id="@+id/HamstringsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Hamstrings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn08" />
+        app:layout_constraintTop_toBottomOf="@+id/GlutesButton" />
 
     <Button
-        android:id="@+id/MuscleSelectBtn10"
+        android:id="@+id/CalvesButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Calves"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MuscleSelectBtn09" />
+        app:layout_constraintTop_toBottomOf="@+id/HamstringsButton" />
 
-    <Button
-        android:id="@+id/buildMuscleNextBtn"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/NextButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
 </android.support.constraint.ConstraintLayout>

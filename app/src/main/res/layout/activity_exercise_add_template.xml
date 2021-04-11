@@ -8,11 +8,11 @@
     tools:context=".ExerciseAddTemplate">
 
     <TextView
-        android:id="@+id/ExerciseeTitle"
+        android:id="@+id/ExerciseTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="30dp"
         android:text="The Name of the Exercise Will go Right Here"
         android:textSize="18sp"
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExerciseeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseTitle"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:editable="false"
-        android:text="The description of the exercise will go here and it can be good and long as the user needs to know what to do in an elegan desciption of the exercise because why else would they be using our application in the first place hmmmmmm?  lets add some more text to see how it looks in the box shall we? "
+        android:text="@string/AddExercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -103,15 +103,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/repCountBackground" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/BackButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -5,47 +5,47 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/strictpreachercurl"
+        android:id="@+id/strictpreachercurlButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Strict Preacher Curls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sittingpreachercurl" />
+        app:layout_constraintTop_toBottomOf="@id/sittingpreachercurlButton" />
 
     <Button
-        android:id="@+id/sittingpreachercurl"
+        android:id="@+id/sittingpreachercurlButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Sitting Preacher Curls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inclinedumbbellcurls" />
+        app:layout_constraintTop_toBottomOf="@id/inclinedumbbellcurlsButton" />
 
     <Button
-        android:id="@+id/inclinedumbbellcurls"
+        android:id="@+id/inclinedumbbellcurlsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Incline Dumbbell Curls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/MachineBicepCurls" />
+        app:layout_constraintTop_toBottomOf="@id/MachineBicepCurlsButton" />
 
     <Button
-        android:id="@+id/MachineBicepCurls"
+        android:id="@+id/MachineBicepCurlsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Machine Bicep Curls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/DumbbellBicepCurls" />
+        app:layout_constraintTop_toBottomOf="@id/DumbbellBicepCurlsButton" />
 
     <Button
-        android:id="@+id/DumbbellBicepCurls"
+        android:id="@+id/DumbbellBicepCurlsButton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
