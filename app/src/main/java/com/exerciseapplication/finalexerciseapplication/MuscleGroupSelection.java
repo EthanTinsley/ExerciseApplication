@@ -16,6 +16,15 @@ public class MuscleGroupSelection extends AppCompatActivity {
 
         boolean buildingWorkout  = getIntent().getBooleanExtra("BuildingWorkout", false) ;
 
+        Button ShoulderExercises = (Button) findViewById(R.id.ShouldersButton) ;
+        ShoulderExercises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent shoulders = new Intent(view.getContext() , ShoulderExercises.class) ;
+                startActivityForResult(shoulders,0);
+            }
+        });
+
 
 
 

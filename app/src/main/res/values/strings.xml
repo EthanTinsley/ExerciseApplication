@@ -87,7 +87,8 @@
 
     Strings for Shoulders
 
-    <string name="SeatedOverheadWeightedPress">SeatedOverheadWeightedPress</string>
+    <string name="SeatedOverheadWeightedPress">Seated Overhead Weighted Press</string>
+    <string name="SeatedOverheadWeightedPressDescription">Seated Overhead Weighted Press</string>
 
     <string name="WeightedLateralRises">Weighted Lateral Rises </string>
 
