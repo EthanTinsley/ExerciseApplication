@@ -15,12 +15,12 @@ public class ExerciseAddTemplate extends AppCompatActivity {
         setContentView(R.layout.activity_exercise_add_template);
 
         String ExerciseName = getIntent().getStringExtra("ExerciseName");
-        String ExerciseDescriptionString = getIntent().getStringExtra("ExerciseDescription");
+        String ExerciseNameDescription = getIntent().getStringExtra("ExerciseDescription");
 
         TextView ExerciseTitle = (TextView) findViewById(R.id.ExerciseTitle) ;
         ExerciseTitle.setText(ExerciseName);
 
         TextView ExerciseDescription = (TextView) findViewById((R.id.ExerciseDescription)) ;
-        ExerciseDescription.setText(ExerciseDescriptionString);
+        ExerciseDescription.setText(ExerciseNameDescription);
     }
 }

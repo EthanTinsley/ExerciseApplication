@@ -31,7 +31,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/DumbellFly"
+        android:text="@string/DumbbellFly"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/InclineDumbellButton" />
@@ -41,7 +41,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/InclineDumbellBenchPress"
+        android:text="@string/InclineDumbbellBenchPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/DeclineDumbellButton" />
@@ -51,7 +51,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/DeclineDumbellBenchPress"
+        android:text="@string/DeclineDumbbellBenchPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/DumbellBenchButton" />
@@ -61,7 +61,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/DeclineDumbellBenchPress"
+        android:text="@string/DumbbellBenchPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/CableFlyButton" />

@@ -29,7 +29,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/InclineDumbellCurls"
+        android:text="@string/InclineDumbbellCurls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/MachineBicepCurlsButton" />
@@ -39,7 +39,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/MachineDumbellCurls"
+        android:text="@string/MachineDumbbellCurls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/DumbbellBicepCurlsButton" />
@@ -49,7 +49,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/DumbellCurls"
+        android:text="@string/DumbbellCurls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Bicepexcersises" />
