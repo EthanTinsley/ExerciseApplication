@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/bicepNextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="305dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/musclesPreviousBtn4"
+        android:id="@+id/bicepPreviousBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:drawable/ic_menu_revert"

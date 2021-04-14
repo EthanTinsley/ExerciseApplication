@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/excerciseNextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="305dp"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/musclesPreviousBtn10"
+        android:id="@+id/exercisePreviousBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:drawable/ic_menu_revert"

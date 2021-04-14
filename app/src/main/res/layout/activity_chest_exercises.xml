@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/chestNextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="305dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/musclesPreviousBtn5"
+        android:id="@+id/chestPreviousBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:drawable/ic_menu_revert"
