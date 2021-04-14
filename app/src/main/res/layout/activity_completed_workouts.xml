@@ -4,7 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context=".CompletedWorkouts">
+
+    <Button
+        android:id="@+id/musclesPreviousBtn11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/completedWorkoutTitle"
@@ -13,8 +38,10 @@
         android:layout_marginStart="140dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="140dp"
+        android:fontFamily="@font/bungee_inline"
         android:text="@string/CompletedWorkoutsTitle"
-        android:textSize="24sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +54,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout01"
+        android:textColor="@color/teal_700"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +68,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout01Information"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/completedWorkout01" />
@@ -64,6 +93,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout02"
+        android:textColor="@color/teal_700"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +107,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout02Information"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/completedWorkout02" />
@@ -101,6 +132,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout03"
+        android:textColor="@color/teal_700"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,6 +146,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout03Information"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/completedWorkout03" />
@@ -138,6 +171,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout04"
+        android:textColor="@color/teal_700"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,6 +185,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout04Information"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/completedWorkout04" />
@@ -176,6 +211,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout05"
+        android:textColor="@color/teal_700"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
@@ -190,6 +226,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="40dp"
         android:text="@string/CompletedWorkout04Information"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/completedWorkout05" />
@@ -208,27 +245,17 @@
         app:layout_constraintTop_toBottomOf="@+id/workout05Information" />
 
     <Button
-        android:id="@+id/CompletedWorkouts01BackButton"
-        android:layout_width="130dp"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/BackButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
-
-    <Button
-        android:id="@+id/CompletedWorkouts01NextPage"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/NextButton"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="682dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="1dp"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completedWorkoutButton05" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,14 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/musclesPreviousBtn3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/BuildWorkoutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
+        android:fontFamily="@font/bungee_inline"
         android:text="@string/BuildExerciseTitle"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +50,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
+        android:fontFamily="@font/bungee"
         android:text="@string/AddAnExercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +63,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="25dp"
+        android:fontFamily="@font/bungee"
         android:text="@string/SaveTheWorkout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,12 +71,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="135dp"
-        android:layout_height="40dp"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="45dp"
+        android:fontFamily="@font/bungee"
         android:gravity="center"
         android:text="@string/UserInputTitle"
+        android:textColor="@color/teal_700"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/NewWorkoutTitleEditText"
         app:layout_constraintStart_toStartOf="parent"

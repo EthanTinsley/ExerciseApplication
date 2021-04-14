@@ -5,7 +5,47 @@
     android:id="@+id/ExerciseAddTemplate"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context=".ExerciseAddTemplate">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="682dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="1dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/musclesPreviousBtn10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/ExerciseTitle"
@@ -14,8 +54,10 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="30dp"
-        android:text="The Name of the Exercise Will go Right Here"
-        android:textSize="18sp"
+        android:fontFamily="@font/bungee_inline"
+        android:text="Name of the Exercise "
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,13 +77,14 @@
 
     <TextView
         android:id="@+id/ExerciseDescription"
-        android:layout_width="325dp"
-        android:layout_height="125dp"
+        android:layout_width="319dp"
+        android:layout_height="108dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:editable="false"
         android:text="@string/AddExercise"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -54,6 +97,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="43dp"
         android:text="Amount of Reps"
+        android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ExerciseDescription" />
 
@@ -79,6 +123,7 @@
         android:layout_marginStart="43dp"
         android:layout_marginTop="20dp"
         android:text="Amount of Sets"
+        android:textColor="@color/teal_700"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ExerciseDescription" />
 
@@ -94,11 +139,12 @@
 
     <Button
         android:id="@+id/AddExercise"
-        android:layout_width="285dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="30dp"
+        android:fontFamily="@font/bungee"
         android:text="@string/AddExercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
