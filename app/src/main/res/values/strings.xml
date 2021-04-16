@@ -32,10 +32,10 @@
 
     Strings for Chest Exercises
     <string name="BenchPress">Barbell Bench Press</string>
-    <string name="BenchPressDescription">BarbellBenchPress</string>
+    <string name="BenchPressDescription">Barbell Bench Press</string>
 
-    <string name="InclineBenchPress">InclineBenchPress</string>
-    <string name="InclineBenchPressDescription">Incline BenchPress</string>
+    <string name="InclineBenchPress">Incline Bench Press</string>
+    <string name="InclineBenchPressDescription">Incline Bench Press</string>
 
     <string name="DeclineBenchPress">Decline Bench Press</string>
     <string name="DeclineBenchPressDescription">Decline Bench Press</string>
@@ -90,7 +90,7 @@
     <string name="SeatedOverheadWeightedPress">Seated Overhead Weighted Press</string>
     <string name="SeatedOverheadWeightedPressDescription">Seated Overhead Weighted Press</string>
 
-    <string name="WeightedLateralRises">Weighted Lateral Rises </string>
+    <string name="WeightedLateralRises">Weighted Lateral Raises </string>
 
     <string name="WeightedFrontRaises">Weighted Front Raises </string>
 
@@ -105,7 +105,7 @@
 
 
     Strings for Bicep Exercises
-    <string name="DumbbellCurls">DumbbellCurls</string>
+    <string name="DumbbellCurls">Dumbbell Curls</string>
     <string name="DumbbellCurlDescription">Description Goes Here </string>
 
     <string name="MachineDumbbellCurls">Machine Dumbbell Curls</string>
