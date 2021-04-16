@@ -1,7 +1,9 @@
 package com.exerciseapplication.finalexerciseapplication;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,5 +24,12 @@ public class ExerciseAddTemplate extends AppCompatActivity {
 
         TextView ExerciseDescription = (TextView) findViewById((R.id.ExerciseDescription)) ;
         ExerciseDescription.setText(ExerciseNameDescription);
+
+        int ExerciseImageId = R.drawable.plank ;
+        ImageView image = (ImageView) findViewById(R.id.imageView);
+        image.setImageResource(ExerciseImageId);
+
+
+
     }
 }
