@@ -1,9 +1,9 @@
 package com.exerciseapplication.finalexerciseapplication;
 
 public class Exercise {
-	
-	public int  repCount , setCount ;
-	public String name , description , imageName , muscleGroup , ID  ;
+
+	public int templateID, imageID, repCount, setCount;
+	public String name , description , muscleGroup , ID  ;
 	
 	
 	public Exercise(String name ) {
@@ -12,8 +12,6 @@ public class Exercise {
 		
 	}
 
-
-	
 	//Appropriate Getters and Setters for Exercise Class 
 	public String getID() {
 		return ID;
@@ -55,17 +53,13 @@ public class Exercise {
 		this.description = description;
 	}
 
-	public String getImageName() {
-		return imageName;
+	public int getImageID() {
+		return imageID;
 	}
 
-	public void setImageName(String imageName) {
-		this.imageName = imageName;
-	}
+	public void setImageID(int imageID) { this.imageID = imageID; }
 
-	public String getMuscleGroup() {
-		return muscleGroup;
-	}
+	public String getMuscleGroup() { return muscleGroup; }
 
 	public void setMuscleGroup(String muscleGroup) {
 		this.muscleGroup = muscleGroup;
@@ -74,4 +68,8 @@ public class Exercise {
 	public String toString() {
 		return name ;
 	}
+
+	public int getTemplateID() { return templateID; }
+
+	public void setTemplateID(int templateID) {	this.templateID = templateID; }
 }

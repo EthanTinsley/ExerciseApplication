@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         BuildWorkoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent BuildWorkoutIntent = new Intent(view.getContext(), BuildWorkoutScreen.class) ;
+                Intent BuildWorkoutIntent = new Intent(view.getContext(), NewWorkout.class) ;
                 startActivityForResult(BuildWorkoutIntent, 0);
             }
         });

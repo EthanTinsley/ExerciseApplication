@@ -29,6 +29,8 @@ public class ExerciseAddTemplate extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.imageView);
         image.setImageResource(ExerciseImageId);
 
+        Exercise testExercise = new Exercise(ExerciseName);
+
 
 
     }

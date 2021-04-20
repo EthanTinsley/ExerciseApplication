@@ -15,7 +15,7 @@
     strings used in build workout activity
     <string name="BuildExerciseTitle">Build a New Workout</string>
     <string name="AddAnExercise"> Add a new Exercise to the Workout</string>
-    <string name="SaveTheWorkout">Save New Workout </string>
+    <string name="SaveTheWorkout">Save Workout </string>
     <string name="UserInputTitle">New Workout Title: </string>
 
     Strings for Muscle Groups
@@ -103,7 +103,6 @@
     <string name="StandingOverheadWeightedPress">Standing Overhead Weighted Press</string>
 
 
-
     Strings for Bicep Exercises
     <string name="DumbbellCurls">Dumbbell Curls</string>
     <string name="DumbbellCurlDescription">Description Goes Here </string>
@@ -119,7 +118,6 @@
 
     <string name="StrictPreacherCurls">Incline Dumbbell Curls</string>
     <string name="StrictPreacherCurlsDescription">Incline Dumbbell Curls</string>
-
 
 
     Strings for Back Exercises
@@ -146,7 +144,6 @@
 
     <string name="TBarRow">T Bar Row</string>
     <string name="TBarRowDescription">T Bar Row</string>
-
 
 
     Strings for Abdominal Exercises
@@ -178,7 +175,6 @@
     <string name="AbdominalRolloutDescription">Abdominal Rollout</string>
 
 
-
     Strings for Glutes Exercises
     <string name="BarbbellHipThrust">Barbbell Hip Thrust</string>
     <string name="BarbellHipThrustDescription">Barbbell Hip Thrust </string>
@@ -194,7 +190,6 @@
 
     <string name="MachineHipAbduction">Machine Hip Abduction</string>
     <string name="MachineHipAbductionDescription">Machine Hip Abduction</string>
-
 
 
     Strings for Hamstring Exercises
@@ -217,7 +212,6 @@
     <string name="SingleLegHamstringCurlDescription">Single Leg Hamstring Curl</string>
 
 
-
     Strings for Calves Exercises
     <string name="LegPressCalfRaise">Leg Press Calf Raise</string>
     <string name="LegPressCalfRaiseDescription">Leg Press Calf Raise</string>
@@ -238,34 +232,10 @@
     <string name="StandingDumbbellCalfRaiseDescription">Standing Dumbbell Calf Raise</string>
 
 
-
     -- Strings for next and back buttons --
     <string name="BackButton">Previous Page</string>
     <string name="NextButton">Next Page</string>
     <string name="AddExercise">Add Exercise</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     -- Ignore this --
