@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         Button CompletedWorkouts = (Button) findViewById(R.id.PreviousWorkoutsButton);
         CompletedWorkouts.setOnClickListener(new View.OnClickListener() {
             @Override

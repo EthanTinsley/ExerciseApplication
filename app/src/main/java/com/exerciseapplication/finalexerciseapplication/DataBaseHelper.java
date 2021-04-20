@@ -1,6 +1,8 @@
 package com.exerciseapplication.finalexerciseapplication;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
@@ -68,6 +70,54 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     // this is called if the database version number changes. IT prevents previous users apps from breaking when you change the database design.
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+
+    public int getNewWorkoutTemplateID(){
+
+        // get the max workout template id from database
+        int templateID = 1;
+
+        // query to get the highest id value
+        String query = "SELECT MAX(" + TEMPLATE_ID + ") FROM " + WORKOUT_TEMPLATE_TABLE ;
+
+        SQLiteDatabase database = this.getReadableDatabase() ;
+
+        Cursor result = database.rawQuery(query,null);
+
+        if (result.moveToFirst()) {
+            templateID = result.getInt(0);
+        }
+        else {
+            // if cursor returns nothing - do nothing
+        }
+
+        return templateID + 1 ;
+    }
+
+    public boolean NewWorkout(Workout workout){
+
+        // takes in a workout object and stores it into the database
+        SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
+        ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
+
+        int templateID = getNewWorkoutTemplateID(); // workout id --> database only
+
+        ContentValues.put(TEMPLATE_ID, templateID);
+        ContentValues.put(TEMPLATE_TITLE, workout.getTitle());
+        ContentValues.put(TEMPLATE_DESCRIPTION, workout.getDescription());
+        ContentValues.put(TEMPLATE_STRETCHES, workout.getStretches());
+
+        // use insert to store the data in the database
+        // imsert will return -1 if it fails
+        // if it does not return -1 then return that the workout it true
+        long insert = database.insert(WORKOUT_TEMPLATE_TABLE,null, ContentValues);
+
+        if (insert == -1) {
+            return false ;
+        } else {
+            return true ;
+        }
 
     }
 

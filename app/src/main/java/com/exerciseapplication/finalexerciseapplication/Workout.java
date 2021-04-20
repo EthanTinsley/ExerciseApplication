@@ -8,7 +8,7 @@ public class Workout {
 	private String Title ;
 	private int WorkoutID ;
 	private boolean completed ;
-	private String dateDay , dateMonth , dateYear ;
+	private String dateDay , dateMonth , dateYear , description , stretches;
 	private LinkedList <Exercise> ExerciseList = new LinkedList();
 	private ListIterator<Exercise> iterator ;
 	
@@ -146,7 +146,14 @@ public class Workout {
 	public void setExerciseList(LinkedList<Exercise> exerciseList) {
 		ExerciseList = exerciseList;
 	}
-	
+
+	public void setDescription(String description){ this.description = description ; }
+
+	public String getDescription(){ return description ;}
+
+	public void setStretches(String stretches){ this.stretches = stretches ;}
+
+	public String getStretches(){ return stretches ;}
 	
 
 }
