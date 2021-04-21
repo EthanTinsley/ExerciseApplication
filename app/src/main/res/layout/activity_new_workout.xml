@@ -4,14 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context=".NewWorkout">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PushupsButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/cmpltWrkoutsPreviousBtn2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/NewWorkoutTemplateTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:fontFamily="@font/bungee_inline"
         android:text="Create a New Workout "
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +51,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
+        android:fontFamily="@font/bungee"
         android:text="--- Give The Workout a Title ---"
+        android:textColor="@color/teal_700"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +64,8 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
         android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NewWorkoutTextView" />
 
@@ -43,7 +74,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
+        android:fontFamily="@font/bungee"
         android:text="--- Give the Workout Description ---"
+        android:textColor="@color/teal_700"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +97,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
+        android:fontFamily="@font/bungee"
         android:text="--- List Any Pre-Workout Stretches ---"
+        android:textColor="@color/teal_700"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,11 +120,11 @@
         android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:fontFamily="@font/bungee"
         android:text="Start New Workout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/StretchesEditText" />
-
 
 
 </android.support.constraint.ConstraintLayout>
