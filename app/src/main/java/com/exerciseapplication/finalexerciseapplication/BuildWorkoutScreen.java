@@ -20,13 +20,19 @@ public class BuildWorkoutScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_build_workout_screen);
 
+        //gets name of the workout from database
         WorkoutTitle = getIntent().getStringExtra("WorkoutTitle");
+
+        //sets the title of the workout based off of user selection
+        Title = (TextView) findViewById(R.id.BuildWorkoutTitle);
+        Title.setText(WorkoutTitle);
 
         AddExerciseButton = (Button) findViewById(R.id.AddExerciseButton);
         AddExerciseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent BuildWorkoutIntent = new Intent(view.getContext(), MuscleGroupSelection.class) ;
+                BuildWorkoutIntent.putExtra("WorkoutTitle", WorkoutTitle);
                 BuildWorkoutIntent.putExtra("BuildingWorkout", true) ;
                 startActivityForResult(BuildWorkoutIntent, 0);
             }

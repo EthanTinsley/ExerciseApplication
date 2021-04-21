@@ -89,22 +89,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/repCountBackground"
-        android:layout_width="150dp"
-
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="43dp"
-        android:text="Amount of Reps"
-        android:textColor="@color/teal_700"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExerciseDescription" />
-
     <EditText
         android:id="@+id/repCountEditText"
         android:layout_width="150dp"
-
+        android:hint="Rep Count"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
@@ -116,21 +104,13 @@
         app:layout_constraintTop_toBottomOf="@+id/ExerciseDescription" />
 
 
-    <TextView
-        android:id="@+id/setCountBackground"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="20dp"
-        android:text="Amount of Sets"
-        android:textColor="@color/teal_700"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExerciseDescription" />
-
     <EditText
         android:id="@+id/setCountEditText"
         android:layout_width="150dp"
-
+        android:hint="Set Count"
+        android:digits="0123456789"
+        android:ems="10"
+        android:inputType="number"
         android:layout_height="40dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
@@ -148,6 +128,6 @@
         android:text="@string/AddExercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/repCountBackground" />
+        app:layout_constraintTop_toBottomOf="@+id/repCountEditText" />
 
 </android.support.constraint.ConstraintLayout>

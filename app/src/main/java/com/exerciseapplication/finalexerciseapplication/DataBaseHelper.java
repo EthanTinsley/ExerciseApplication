@@ -124,5 +124,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public boolean addExercise(String WorkoutName , Exercise exercise){
+
+
+        return true ;
+    }
 
 }
