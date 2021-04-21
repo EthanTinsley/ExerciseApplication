@@ -88,7 +88,7 @@ public class ExerciseAddTemplate extends AppCompatActivity {
                 if (success == true) {
                     Toast.makeText(ExerciseAddTemplate.this, "Exercise: " + ExerciseName +
                             " Was successfully added to " + WorkoutName , Toast.LENGTH_LONG).show();
-
+                    ExerciseAdded.putExtra("WorkoutTitle",WorkoutName);
                     startActivityForResult(ExerciseAdded,0);
                 }
                 else {

@@ -105,8 +105,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             // if cursor returns nothing - do nothing
         }
 
-        result.close(); // closes results statement
-        database.close(); // closes datbase connection
+        result.close();
         return templateID  ; // new workout template ID
     }
 
@@ -131,6 +130,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         // if it does not return -1 then return that the workout it true
         long insert = database.insert(WORKOUT_TEMPLATE_TABLE,null, ContentValues);
 
+        database.close();
+
         if (insert == -1) return false ; // if workout upload to database fails
         else return true ; // if workout upload works correctly
 
@@ -152,8 +153,18 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         int repCount = exercise.getRepCount(); // how many reps for this exercise
         int setCount = exercise.getSetCount(); // how many sets for this exercise
 
+        // setting our datapoints into a package to pass to the database
+        ContentValues.put(EXERCISE_NAME, ExerciseName);
+        ContentValues.put(EXERCISE_ID, workoutPosition);
+        ContentValues.put(EXERCISE_DESCRIPTION, ExerciseDescription);
+        ContentValues.put(EXERCISE_IMG_ID, ExerciseImageID);
+        ContentValues.put(REP_COUNT, repCount);
+        ContentValues.put(SET_COUNT, setCount);
+
         // insert returns -1 if upload fails
         long insert = database.insert(EXERCISE_TABLE,null, ContentValues); // attempts to upload to database
+
+        database.close();
 
         if (insert == -1) return false ; // if data entry fails
         else return true ; // if data entry is successful
@@ -171,8 +182,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         // query to get the highest id value
         String query = "SELECT MAX(" + EXERCISE_ID + ") FROM " + EXERCISE_TABLE + " WHERE " + TEMPLATE_ID + " IN "
                 + " ( SELECT " + TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE +
-                " = " + WorkoutName + " );" ;
+                " = " + '"' +  WorkoutName + '"' + " );" ;
 
+        System.out.println(query);
         // Create and instance of the database
         SQLiteDatabase database = this.getReadableDatabase() ;
 
@@ -188,7 +200,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         }
 
         result.close();
-        database.close();
         //return Position of the new Exercise in the Selected Workout
         return maxPosition  ;
 
