@@ -27,11 +27,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String WORKOUT_COMPLETED_TABLE = "workoutCompleted";
     public static final String WORKOUT_TEMPLATE_TABLE = "workoutTemplate";
 
+    // Initializing a Database helper object uses this class as context , database name for file , and version number
     public DataBaseHelper(@Nullable Context context) {
         super(context, "workoutApp.db", null, 1 );
     }
 
     // this is called the first time a database is accessed. There Should be code here to create a new database.
+    // Uses strings to hold SQL queries that would create the appropriate tables
+    // db.execSQL() passes the string to create table to SQLite and creates the tables within the database
     @Override
     public void onCreate(SQLiteDatabase db) {
 
@@ -71,11 +74,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 
     // this is called if the database version number changes. IT prevents previous users apps from breaking when you change the database design.
+    // ignore this mostly
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
+    // this method gets the highest template-ID and returns that value + 1
+    // used to keep workout templates unique
+    // does the job of autoincrement essentially
     public int getNewWorkoutTemplateID(){
 
         // get the max workout template id from database
@@ -84,10 +91,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         // query to get the highest id value
         String query = "SELECT MAX(" + TEMPLATE_ID + ") FROM " + WORKOUT_TEMPLATE_TABLE ;
 
+        // creating a database object to read from the database
         SQLiteDatabase database = this.getReadableDatabase() ;
 
+        // used to store results in a list
         Cursor result = database.rawQuery(query,null);
 
+        // getting the results from the result list
         if (result.moveToFirst()) {
             templateID = result.getInt(0) + 1;
         }
@@ -95,15 +105,20 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             // if cursor returns nothing - do nothing
         }
 
-        return templateID  ;
+        result.close(); // closes results statement
+        database.close(); // closes datbase connection
+        return templateID  ; // new workout template ID
     }
 
+    // NewWorkout() takes a workout object and uploads it into the database
+    // Returns a boolean to indicate if data upload was successful or not
     public boolean NewWorkout(Workout workout){
 
         // takes in a workout object and stores it into the database
         SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
         ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
 
+        // templateID keeps workouts unique inside database
         int templateID = getNewWorkoutTemplateID(); // workout id --> database only
 
         ContentValues.put(TEMPLATE_ID, templateID);
@@ -116,34 +131,38 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         // if it does not return -1 then return that the workout it true
         long insert = database.insert(WORKOUT_TEMPLATE_TABLE,null, ContentValues);
 
-        if (insert == -1) {
-            return false ;
-        } else {
-            return true ;
-        }
+        if (insert == -1) return false ; // if workout upload to database fails
+        else return true ; // if workout upload works correctly
 
     }
 
+    // addExercise() takes an Exercise object and uploads it into the database
+    // Exercise is Child of workout also included in method parameters
+    // Returns a boolean to indicate if data upload was successful or not
     public boolean addExercise(String WorkoutName , Exercise exercise){
 
         //Create database and it's values to enter for the new exercise
         SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
         ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
 
-        int workoutPosition = getPosition(WorkoutName) ;
-        String ExerciseName = exercise.getName();
-        String ExerciseDescription = exercise.getDescription();
-        int ExerciseImageID = exercise.getImageID();
-        int repCount = exercise.getRepCount();
-        int setCount = exercise.getSetCount();
+        int workoutPosition = getPosition(WorkoutName) ; // position in the workout
+        String ExerciseName = exercise.getName(); // Name of exercise
+        String ExerciseDescription = exercise.getDescription(); // Description of the exercise
+        int ExerciseImageID = exercise.getImageID(); // Image ID of the exercise
+        int repCount = exercise.getRepCount(); // how many reps for this exercise
+        int setCount = exercise.getSetCount(); // how many sets for this exercise
 
-        long insert = database.insert(EXERCISE_TABLE,null, ContentValues);
+        // insert returns -1 if upload fails
+        long insert = database.insert(EXERCISE_TABLE,null, ContentValues); // attempts to upload to database
 
         if (insert == -1) return false ; // if data entry fails
         else return true ; // if data entry is successful
 
     }
 
+    // Use a method to get the next "available" slot in the workout
+    // takes a workoutname to identify how many Exercises are in it
+    // Returns the position with which the new exercise should be in the database
     public int getPosition(String WorkoutName){
 
         // default value
@@ -168,8 +187,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
             // if cursor returns nothing - do nothing
         }
 
+        result.close();
+        database.close();
         //return Position of the new Exercise in the Selected Workout
         return maxPosition  ;
 
     }
+
+
+
 }
