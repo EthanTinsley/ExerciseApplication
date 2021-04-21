@@ -5,7 +5,7 @@
     <string name="ethan_tinsley">Ethan Tinsley</string>
 
     Strings used in main activity
-    <string name="MainPageTitle">Insert the name of the App here! </string>
+    <string name="MainPageTitle">Emergence Fitness! </string>
     <string name="StartWorkoutButton">Start Workout!</string>
     <string name="BuildWorkoutButton">Build a Workout!</string>
     <string name="ViewExistingWorkouts">View Existing Workouts!</string>
