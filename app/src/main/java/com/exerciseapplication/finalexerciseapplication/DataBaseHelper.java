@@ -35,14 +35,14 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String CreateTableStatement = "CREATE TABLE " + WORKOUT_TEMPLATE_TABLE + "(\n" +
+        String CreateWorkoutTemplateTableStatement = "CREATE TABLE " + WORKOUT_TEMPLATE_TABLE + "(\n" +
                 TEMPLATE_ID + " int UNIQUE ,\n" +
                 TEMPLATE_TITLE + " VARCHAR(255) ,\n" +
                 TEMPLATE_DESCRIPTION + " VARCAHR (1023) ,\n" +
                 TEMPLATE_STRETCHES + " VARCHAR (1023) ,\n" +
                 "PRIMARY KEY(" + TEMPLATE_ID + ")) ;\n" +  "\n" ;
 
-                CreateTableStatement += "CREATE TABLE " + WORKOUT_COMPLETED_TABLE + " (\n" +
+        String CreateCompletedWorkoutTableStatement = "CREATE TABLE " + WORKOUT_COMPLETED_TABLE + " (\n" +
                 TEMPLATE_ID + " int ,\n" +
                 WORKOUT_ID + " int,\n" +
                 WORKOUT_DURATION + " double ,\n" +
@@ -51,7 +51,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "PRIMARY KEY(" + TEMPLATE_ID + " , " + WORKOUT_ID + "),\n" +
                 "FOREIGN KEY(" + TEMPLATE_ID + ") REFERENCES " + WORKOUT_TEMPLATE_TABLE + "(" + TEMPLATE_ID + ")) ;\n" + "\n" ;
 
-                CreateTableStatement += "CREATE TABLE " + EXERCISE_TABLE + " ( \n" +
+        String  CreateExerciseTableStatement = "CREATE TABLE " + EXERCISE_TABLE + " ( \n" +
                 TEMPLATE_ID + " int ,\n" +
                 EXERCISE_ID + " int ,\n" +
                 EXERCISE_NAME + " VARCHAR(255) NOT NULL ,\n" +
@@ -62,7 +62,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 "PRIMARY KEY(" + TEMPLATE_ID + " , " + EXERCISE_ID + ") ,\n" +
                 "FOREIGN KEY(" + TEMPLATE_ID + ") REFERENCES " + WORKOUT_TEMPLATE_TABLE + "(" + TEMPLATE_ID + ")) ;" ;
 
-        db.execSQL(CreateTableStatement);
+        db.execSQL(CreateWorkoutTemplateTableStatement);
+        db.execSQL(CreateCompletedWorkoutTableStatement);
+        db.execSQL(CreateExerciseTableStatement);
+
 
     }
 

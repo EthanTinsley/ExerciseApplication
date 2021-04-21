@@ -46,7 +46,7 @@ public class NewWorkout extends AppCompatActivity {
                 boolean success = dataBaseHelper.NewWorkout(CreatedWorkout);
 
                 Toast.makeText(NewWorkout.this, "Workout: " + Title + " was created successfully!"
-                                , Toast.LENGTH_SHORT).show();
+                                , Toast.LENGTH_LONG).show();
 
                 Intent NewWorkout = new Intent(view.getContext() , BuildWorkoutScreen.class);
                 NewWorkout.putExtra("WorkoutTitle" , Title );
