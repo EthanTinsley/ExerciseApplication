@@ -126,6 +126,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public boolean addExercise(String WorkoutName , Exercise exercise){
 
+        //Create database and it's values to enter for the new exercise
         SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
         ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
 
@@ -136,10 +137,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         int repCount = exercise.getRepCount();
         int setCount = exercise.getSetCount();
 
-        
+        long insert = database.insert(EXERCISE_TABLE,null, ContentValues);
 
+        if (insert == -1) return false ; // if data entry fails
+        else return true ; // if data entry is successful
 
-        return true ;
     }
 
     public int getPosition(String WorkoutName){
@@ -151,8 +153,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         String query = "SELECT MAX(" + EXERCISE_ID + ") FROM " + EXERCISE_TABLE + " WHERE " + TEMPLATE_ID + " IN "
                 + " ( SELECT " + TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE +
                 " = " + WorkoutName + " );" ;
-
-
 
         // Create and instance of the database
         SQLiteDatabase database = this.getReadableDatabase() ;
