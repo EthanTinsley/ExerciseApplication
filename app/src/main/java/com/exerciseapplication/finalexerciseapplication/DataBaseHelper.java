@@ -130,7 +130,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
 
         int workoutPosition = getPosition(WorkoutName) ;
+        String ExerciseName = exercise.getName();
+        String ExerciseDescription = exercise.getDescription();
+        int ExerciseImageID = exercise.getImageID();
+        int repCount = exercise.getRepCount();
+        int setCount = exercise.getSetCount();
 
+        
 
 
         return true ;
@@ -143,19 +149,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         // query to get the highest id value
         String query = "SELECT MAX(" + EXERCISE_ID + ") FROM " + EXERCISE_TABLE + " WHERE " + TEMPLATE_ID + " IN "
-                + " ( SELECT " + TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE + " = ? );" ;
+                + " ( SELECT " + TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE +
+                " = " + WorkoutName + " );" ;
 
 
 
         // Create and instance of the database
         SQLiteDatabase database = this.getReadableDatabase() ;
-
-        // Used to store and send the name of the WorkOut within the query
-        ContentValues ContentValues = new ContentValues() ;
-
-        // Pass the name of the
-        ContentValues.put(TEMPLATE_TITLE, WorkoutName);
-
 
         // Results list for the database query
         Cursor result = database.rawQuery(query, null);
