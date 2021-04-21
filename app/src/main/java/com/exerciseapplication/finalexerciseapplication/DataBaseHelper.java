@@ -53,7 +53,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         String  CreateExerciseTableStatement = "CREATE TABLE " + EXERCISE_TABLE + " ( \n" +
                 TEMPLATE_ID + " int ,\n" +
-                EXERCISE_ID + " int ,\n" +
+                EXERCISE_ID + " int ,\n" + // Used for Positioning
                 EXERCISE_NAME + " VARCHAR(255) NOT NULL ,\n" +
                 EXERCISE_DESCRIPTION + " VARCHAR(1023) ,\n" +
                 EXERCISE_IMG_ID + " int ,\n" +
@@ -89,13 +89,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         Cursor result = database.rawQuery(query,null);
 
         if (result.moveToFirst()) {
-            templateID = result.getInt(0);
+            templateID = result.getInt(0) + 1;
         }
         else {
             // if cursor returns nothing - do nothing
         }
 
-        return templateID + 1 ;
+        return templateID  ;
     }
 
     public boolean NewWorkout(Workout workout){
@@ -126,8 +126,50 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public boolean addExercise(String WorkoutName , Exercise exercise){
 
+        SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
+        ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
+
+        int workoutPosition = getPosition(WorkoutName) ;
+
+
 
         return true ;
     }
 
+    public int getPosition(String WorkoutName){
+
+        // default value
+        int maxPosition = 0 ;
+
+        // query to get the highest id value
+        String query = "SELECT MAX(" + EXERCISE_ID + ") FROM " + EXERCISE_TABLE + " WHERE " + TEMPLATE_ID + " IN "
+                + " ( SELECT " + TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE + " = ? );" ;
+
+
+
+        // Create and instance of the database
+        SQLiteDatabase database = this.getReadableDatabase() ;
+
+        // Used to store and send the name of the WorkOut within the query
+        ContentValues ContentValues = new ContentValues() ;
+
+        // Pass the name of the
+        ContentValues.put(TEMPLATE_TITLE, WorkoutName);
+
+
+        // Results list for the database query
+        Cursor result = database.rawQuery(query, null);
+
+        // get the results from the result list
+        if (result.moveToFirst()) {
+            maxPosition = result.getInt(0) + 1;
+        }
+        else {
+            // if cursor returns nothing - do nothing
+        }
+
+        //return Position of the new Exercise in the Selected Workout
+        return maxPosition  ;
+
+    }
 }
