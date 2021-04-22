@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,8 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                Intent SavedWorkouts = new Intent(view.getContext(), workoutTemplates.class);
+                Intent SavedWorkouts = new Intent(view.getContext(), WorkoutTemplates.class);
                 startActivityForResult(SavedWorkouts,0);
+            }
+        });
+
+        Button StartWorkoutButton = (Button) findViewById(R.id.MainStartWorkout);
+        StartWorkoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent StartWorkout = new Intent(view.getContext(), WorkoutTemplates.class);
+                StartWorkout.putExtra("StartingWorkout", true);
+                startActivityForResult(StartWorkout,0);
             }
         });
 

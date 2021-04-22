@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/ExerciseTitle"
+        android:id="@+id/confirmationWorkoutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -72,11 +72,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExerciseTitle"
+        app:layout_constraintTop_toBottomOf="@+id/confirmationWorkoutTitle"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/ExerciseDescription"
+        android:id="@+id/confirmPreWorkoutStretches"
         android:layout_width="319dp"
         android:layout_height="108dp"
         android:layout_marginStart="30dp"
@@ -101,7 +101,7 @@
         android:inputType="number"
         android:maxLength="6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExerciseDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmPreWorkoutStretches" />
 
 
     <EditText
@@ -115,10 +115,10 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExerciseDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmPreWorkoutStretches" />
 
     <Button
-        android:id="@+id/AddExercise"
+        android:id="@+id/confirmedStartWorkout"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

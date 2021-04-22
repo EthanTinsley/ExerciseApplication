@@ -3,11 +3,9 @@ package com.exerciseapplication.finalexerciseapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -43,7 +41,7 @@ public class BuildWorkoutScreen extends AppCompatActivity {
         ExerciseAdapter = new ArrayAdapter<Exercise>(BuildWorkoutScreen.this, android.R.layout.simple_list_item_1, addedExercises);
         ExerciseHolder.setAdapter(ExerciseAdapter);
 
-        AddExerciseButton = (Button) findViewById(R.id.AddExerciseButton);
+        AddExerciseButton = (Button) findViewById(R.id.MainStartWorkout);
         AddExerciseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

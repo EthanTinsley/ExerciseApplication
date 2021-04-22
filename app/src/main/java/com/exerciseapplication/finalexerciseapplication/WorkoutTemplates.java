@@ -7,11 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.List;
 
-public class workoutTemplates extends AppCompatActivity {
+public class WorkoutTemplates extends AppCompatActivity {
 
     ArrayAdapter workoutArrayAdapter ;
     List<Workout> Workouts ;
@@ -28,7 +27,7 @@ public class workoutTemplates extends AppCompatActivity {
         startingWorkout = getIntent().getBooleanExtra("StartingWorkout",false);
 
         // Get access to the database
-        DataBaseHelper DataBaseHelper = new DataBaseHelper(workoutTemplates.this);
+        DataBaseHelper DataBaseHelper = new DataBaseHelper(WorkoutTemplates.this);
 
         // Return all available workouts
         Workouts = DataBaseHelper.getWorkouts();
@@ -37,21 +36,28 @@ public class workoutTemplates extends AppCompatActivity {
         WorkoutListView = findViewById(R.id.workoutTemplatesListView);
 
         // create the object to hold the workouts
-        workoutArrayAdapter = new ArrayAdapter<Workout>(workoutTemplates.this, android.R.layout.simple_list_item_1, Workouts);
+        workoutArrayAdapter = new ArrayAdapter<Workout>(WorkoutTemplates.this, android.R.layout.simple_list_item_1, Workouts);
 
         // fill the list view with the array adapter
         WorkoutListView.setAdapter(workoutArrayAdapter);
 
+        // Method for selecting an element from the ListView
         WorkoutListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Workout SelectedWorkout = (Workout) WorkoutListView.getItemAtPosition(position);
+                // get the object stored in the listview that the user selected
+                Workout ListViewSelectedWorkout = (Workout) WorkoutListView.getItemAtPosition(position);
 
-                if (startingWorkout != true) WorkoutSelected = new Intent(workoutTemplates.this,BuildWorkoutScreen.class);
+                // if user is NOT starting a workout direct them to workout builder to edit workout
+                // else direct to start workout work-flow
+                if (startingWorkout != true) WorkoutSelected = new Intent(WorkoutTemplates.this,BuildWorkoutScreen.class);
+                else WorkoutSelected = new Intent(WorkoutTemplates.this,WorkoutStartConfirmation.class);
 
-
-                WorkoutSelected.putExtra("WorkoutTitle",SelectedWorkout.getTitle());
+                // send workout infromation to the next activity
+                WorkoutSelected.putExtra("WorkoutTitle",ListViewSelectedWorkout.getTitle());
+                WorkoutSelected.putExtra("WorkoutDescription",ListViewSelectedWorkout.getDescription());
+                WorkoutSelected.putExtra("WorkoutStretches",ListViewSelectedWorkout.getStretches());
                 startActivityForResult(WorkoutSelected,0);
             }
         });

@@ -1,7 +1,6 @@
 package com.exerciseapplication.finalexerciseapplication;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,11 +41,11 @@ public class ExerciseAddTemplate extends AppCompatActivity {
         ExerciseImageID = getIntent().getIntExtra("ExerciseImage", 0);
 
         // Exercise title changes to name of exercise
-        TextView ExerciseTitle = (TextView) findViewById(R.id.ExerciseTitle) ;
+        TextView ExerciseTitle = (TextView) findViewById(R.id.confirmationWorkoutTitle) ;
         ExerciseTitle.setText(ExerciseName);
 
         // Exercise Description set based off of Intent
-        TextView ExerciseDescriptionTextView = (TextView) findViewById((R.id.ExerciseDescription)) ;
+        TextView ExerciseDescriptionTextView = (TextView) findViewById((R.id.confirmPreWorkoutStretches)) ;
         ExerciseDescriptionTextView.setText(ExerciseDescription);
 
         //Exercise Image is set accordingly
@@ -56,7 +55,7 @@ public class ExerciseAddTemplate extends AppCompatActivity {
         // Getting EditText and button id's
         RepCount = (EditText) findViewById(R.id.repCountEditText);
         SetCount = (EditText) findViewById(R.id.setCountEditText);
-        addExercise = (Button) findViewById(R.id.AddExercise);
+        addExercise = (Button) findViewById(R.id.confirmedStartWorkout);
 
         // If the user is not building a workout then hide user input and finalization options
         if (BuildingWorkout != true){
