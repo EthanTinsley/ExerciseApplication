@@ -2,8 +2,8 @@ package com.exerciseapplication.finalexerciseapplication;
 
 public class Exercise {
 
-	public int templateID, imageID, repCount, setCount;
-	public String name , description , muscleGroup , ID  ;
+	private int templateID, imageID, repCount, setCount;
+	private String name , description , muscleGroup , ID  ;
 	
 	
 	public Exercise(String name ) {
@@ -72,4 +72,6 @@ public class Exercise {
 	public int getTemplateID() { return templateID; }
 
 	public void setTemplateID(int templateID) {	this.templateID = templateID; }
+
+
 }

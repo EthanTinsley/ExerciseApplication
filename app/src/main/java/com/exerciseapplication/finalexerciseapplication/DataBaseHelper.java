@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public static final String TEMPLATE_ID = "templateID";
@@ -146,6 +149,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
         ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
 
+        int TemplateID = getTemplateID(WorkoutName);
         int workoutPosition = getPosition(WorkoutName) ; // position in the workout
         String ExerciseName = exercise.getName(); // Name of exercise
         String ExerciseDescription = exercise.getDescription(); // Description of the exercise
@@ -154,6 +158,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         int setCount = exercise.getSetCount(); // how many sets for this exercise
 
         // setting our datapoints into a package to pass to the database
+        ContentValues.put(TEMPLATE_ID, TemplateID);
         ContentValues.put(EXERCISE_NAME, ExerciseName);
         ContentValues.put(EXERCISE_ID, workoutPosition);
         ContentValues.put(EXERCISE_DESCRIPTION, ExerciseDescription);
@@ -202,6 +207,77 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         result.close();
         //return Position of the new Exercise in the Selected Workout
         return maxPosition  ;
+    }
+
+    // create a method to get the template ID for a workout based on the workout title
+    public int getTemplateID(String WorkoutName){
+
+        //workout title
+        int templateID = 0;
+
+        // query to retrieve appropriate id number
+        String query = "SELECT " + TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE +
+                " = " + '"' + WorkoutName + '"' + " ;" ;
+
+        // create a database object
+        SQLiteDatabase database = this.getReadableDatabase();
+
+        //stores results
+        Cursor result = database.rawQuery(query,null);
+
+        // retrieve results from the query
+        if (result.moveToFirst()){
+            templateID = result.getInt(0);
+        }
+
+        result.close();
+        return templateID ; // return template id
+    }
+
+    // Create a method that will return a list of all the Exercises that belong to a workout
+    // name of the workout is passed as a parameter to the method to be called
+    public List<Exercise>  getAddedExercises(String WorkoutName) {
+
+        List<Exercise> addedExercises = new ArrayList<>();
+
+        // get data from the database
+        String query = "SELECT * FROM " + EXERCISE_TABLE + " WHERE " + TEMPLATE_ID + " IN ( SELECT " +
+                TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE + " = " + '"' +
+                WorkoutName + '"' + " );" ;
+
+        System.out.println(query);
+
+        SQLiteDatabase database = this.getReadableDatabase();
+
+        Cursor result = database.rawQuery(query, null);
+
+        if (result.moveToFirst()) {
+            do {
+                int TemplateID = result.getInt(0);
+                int ExerciseID = result.getInt(1);
+                String ExerciseName = result.getString(2);
+                String ExerciseDescription = result.getString(3);
+                int ExerciseImageID = result.getInt(4);
+                int repCount = result.getInt(5);
+                int setCount = result.getInt(6);
+
+                Exercise exercise = new Exercise(ExerciseName);
+                exercise.setDescription(ExerciseDescription);
+                exercise.setImageID(ExerciseImageID);
+                exercise.setRepCount(repCount);
+                exercise.setSetCount(setCount);
+
+                System.out.println(exercise);
+
+                addedExercises.add(exercise);
+
+            } while( result.moveToNext());
+
+        }
+
+        result.close();
+        database.close();
+        return addedExercises ; // return list of exercises
 
     }
 

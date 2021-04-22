@@ -3,16 +3,24 @@ package com.exerciseapplication.finalexerciseapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.List;
 
 public class BuildWorkoutScreen extends AppCompatActivity {
 
     Button AddExerciseButton ;
     TextView Title ;
     String WorkoutTitle ;
+    ArrayAdapter ExerciseAdapter;
+    List<Exercise> addedExercises ;
+    ListView ExerciseHolder ;
 
 
     @Override
@@ -26,6 +34,14 @@ public class BuildWorkoutScreen extends AppCompatActivity {
         //sets the title of the workout based off of user selection
         Title = (TextView) findViewById(R.id.BuildWorkoutTitle);
         Title.setText(WorkoutTitle);
+
+        ExerciseHolder = findViewById(R.id.AddedExercises);
+
+        DataBaseHelper DataBaseHelper = new DataBaseHelper(BuildWorkoutScreen.this);
+        addedExercises = DataBaseHelper.getAddedExercises(WorkoutTitle);
+
+        ExerciseAdapter = new ArrayAdapter<Exercise>(BuildWorkoutScreen.this, android.R.layout.simple_list_item_1, addedExercises);
+        ExerciseHolder.setAdapter(ExerciseAdapter);
 
         AddExerciseButton = (Button) findViewById(R.id.AddExerciseButton);
         AddExerciseButton.setOnClickListener(new View.OnClickListener() {
