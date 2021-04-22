@@ -22,6 +22,8 @@ public class ExerciseAddTemplate extends AppCompatActivity {
     EditText SetCount ;
     Button addExercise ;
     Exercise exercise ;
+    int Reps ;
+    int Sets ;
 
 
     @Override
@@ -67,8 +69,11 @@ public class ExerciseAddTemplate extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Get user input for set and rep counts
-                int Sets = Integer.parseInt(SetCount.getText().toString());
-                int Reps = Integer.parseInt(RepCount.getText().toString());
+
+                if (!SetCount.getText().toString().matches("")) Sets = Integer.parseInt(SetCount.getText().toString());
+                else Sets = -1 ;
+                if (!RepCount.getText().toString().matches("")) Reps = Integer.parseInt(RepCount.getText().toString());
+                else Reps = -1 ;
 
                 // create a new exercise to enter the database
                 exercise = new Exercise(ExerciseName);
