@@ -43,6 +43,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button SavedWorkoutButton = (Button) findViewById(R.id.ViewWorkoutsButton);
+        SavedWorkoutButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent SavedWorkouts = new Intent(view.getContext(), workoutTemplates.class);
+                startActivityForResult(SavedWorkouts,0);
+            }
+        });
+
 
     }
 }

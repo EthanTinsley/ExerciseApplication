@@ -238,6 +238,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     // name of the workout is passed as a parameter to the method to be called
     public List<Exercise>  getAddedExercises(String WorkoutName) {
 
+        // List to hold the Exercises returned by search query
         List<Exercise> addedExercises = new ArrayList<>();
 
         // get data from the database
@@ -247,8 +248,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         System.out.println(query);
 
+        // Create instance of the database
         SQLiteDatabase database = this.getReadableDatabase();
-
+        // holds results
         Cursor result = database.rawQuery(query, null);
 
         if (result.moveToFirst()) {
@@ -278,6 +280,43 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         result.close();
         database.close();
         return addedExercises ; // return list of exercises
+
+    }
+
+    public List<Workout> getWorkouts(){
+
+        // create list to hold workouts
+        List<Workout> workouts = new ArrayList<>();
+
+        // Create the query to return all workouts
+        String query = "SELECT * FROM " + WORKOUT_TEMPLATE_TABLE ;
+
+        // Create database instance
+        SQLiteDatabase database = getReadableDatabase();
+
+        // Create results list to hold query results
+        Cursor results = database.rawQuery(query,null);
+
+        // assing results from database to workout object and then add into the list
+        if (results.moveToFirst()){
+            do{
+                int templateID = results.getInt(0);
+                String workoutTitle = results.getString(1);
+                String workoutDescription = results.getString(2);
+                String workoutStretches = results.getString(3);
+
+                Workout NewWorkout = new Workout(workoutTitle);
+                NewWorkout.setDescription(workoutDescription);
+                NewWorkout.setStretches(workoutStretches);
+
+                workouts.add(NewWorkout);
+
+            } while(results.moveToNext());
+        }
+
+        results.close();
+        database.close();
+        return workouts ;
 
     }
 

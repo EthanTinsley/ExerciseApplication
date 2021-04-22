@@ -154,6 +154,10 @@ public class Workout {
 	public void setStretches(String stretches){ this.stretches = stretches ;}
 
 	public String getStretches(){ return stretches ;}
+
+	public String toString() {
+		return Title ;
+	}
 	
 
 }

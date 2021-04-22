@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalExerciseApplication">
-        <activity android:name=".NewWorkout"></activity>
+        <activity android:name=".workoutTemplates"></activity>
+        <activity android:name=".NewWorkout" />
         <activity android:name=".BuildWorkoutScreen" />
         <activity android:name=".ExerciseAddTemplate" />
         <activity android:name=".ShoulderExercises" />
