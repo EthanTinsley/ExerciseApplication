@@ -37,16 +37,16 @@ public class WorkoutStartConfirmation extends AppCompatActivity {
         
         // Identify the textViews that will display the Workout information
         // find the title 
-        TitleTextView = (TextView) findViewById(R.id.confirmationWorkoutTitle);
+        TitleTextView = (TextView) findViewById(R.id.ConfirmedWorkoutTitle);
         
         // find the description 
-        DescriptionTextView = (TextView) findViewById(R.id.confirmWorkoutDescription);
+        DescriptionTextView = (TextView) findViewById(R.id.ConfirmedWorkoutDescription);
         
         //find the Stretches 
-        StretchesTextView = (TextView) findViewById(R.id.confirmPreWorkoutStretches);
+        StretchesTextView = (TextView) findViewById(R.id.ConfirmedWorkoutStretches);
         
         // Identify the Button that will start the Workout
-        StartWorkout = (Button) findViewById(R.id.confirmedStartWorkout);
+        StartWorkout = (Button) findViewById(R.id.ConfirmedStartWorkout);
 
         // Change the TextViews to reflect the information of the incoming Workout
         TitleTextView.setText(WorkoutTitle);

@@ -41,11 +41,11 @@ public class ExerciseAddTemplate extends AppCompatActivity {
         ExerciseImageID = getIntent().getIntExtra("ExerciseImage", 0);
 
         // Exercise title changes to name of exercise
-        TextView ExerciseTitle = (TextView) findViewById(R.id.confirmationWorkoutTitle) ;
+        TextView ExerciseTitle = (TextView) findViewById(R.id.ConfirmedWorkoutTitle) ;
         ExerciseTitle.setText(ExerciseName);
 
         // Exercise Description set based off of Intent
-        TextView ExerciseDescriptionTextView = (TextView) findViewById((R.id.confirmPreWorkoutStretches)) ;
+        TextView ExerciseDescriptionTextView = (TextView) findViewById((R.id.ConfirmedWorkoutStretches)) ;
         ExerciseDescriptionTextView.setText(ExerciseDescription);
 
         //Exercise Image is set accordingly
@@ -55,7 +55,7 @@ public class ExerciseAddTemplate extends AppCompatActivity {
         // Getting EditText and button id's
         RepCount = (EditText) findViewById(R.id.repCountEditText);
         SetCount = (EditText) findViewById(R.id.setCountEditText);
-        addExercise = (Button) findViewById(R.id.confirmedStartWorkout);
+        addExercise = (Button) findViewById(R.id.ConfirmedStartWorkout);
 
         // If the user is not building a workout then hide user input and finalization options
         if (BuildingWorkout != true){

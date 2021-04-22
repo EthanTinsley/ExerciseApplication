@@ -18,7 +18,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-            android:id="@+id/exercisePreviousBtn"
+            android:id="@+id/ConfirmationPreviousBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@android:drawable/ic_menu_revert"
@@ -30,11 +30,11 @@
             app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/confirmationWorkoutTitle"
+        android:id="@+id/ConfirmedWorkoutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="@font/bungee_inline"
         android:text="Name of the Workout"
@@ -45,67 +45,67 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/confirmPreWorkoutStretches"
-        android:layout_width="319dp"
-        android:layout_height="108dp"
+        android:id="@+id/ConfirmedWorkoutStretches"
+        android:layout_width="325dp"
+        android:layout_height="100dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:editable="false"
         android:text="@string/AddExercise"
         android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmWorkoutStretchesTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedWorkoutStretchesTitle" />
 
 
     <Button
-        android:id="@+id/confirmedStartWorkout"
+        android:id="@+id/ConfirmedStartWorkout"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginBottom="48dp"
         android:fontFamily="@font/bungee"
         android:text="Start Workout!"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPreWorkoutStretches" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/confirmWorkoutDescription"
+        android:id="@+id/ConfirmedWorkoutDescription"
         android:layout_width="325dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
         android:text="TextView"
         android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmDescriptionTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedDescriptionTitle" />
 
     <TextView
-        android:id="@+id/confirmDescriptionTitle"
+        android:id="@+id/ConfirmedDescriptionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/black_ops_one"
         android:text="Workout Descrption"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmationWorkoutTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedWorkoutTitle" />
 
     <TextView
-        android:id="@+id/confirmWorkoutStretchesTitle"
+        android:id="@+id/ConfirmedWorkoutStretchesTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/black_ops_one"
         android:text="Pre-workout stretches"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmWorkoutDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedWorkoutDescription" />
 
 
 </android.support.constraint.ConstraintLayout>

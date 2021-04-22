@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalExerciseApplication">
-        <activity android:name=".WorkoutStartConfirmation"></activity>
+        <activity android:name=".WorkoutStartConfirmation" />
         <activity android:name=".WorkoutTemplates" />
         <activity android:name=".NewWorkout" />
         <activity android:name=".BuildWorkoutScreen" />

@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/exercisePreviousBtn"
+        android:id="@+id/ConfirmationPreviousBtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:drawable/ic_menu_revert"
@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/confirmationWorkoutTitle"
+        android:id="@+id/ConfirmedWorkoutTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -72,11 +72,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmationWorkoutTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedWorkoutTitle"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/confirmPreWorkoutStretches"
+        android:id="@+id/ConfirmedWorkoutStretches"
         android:layout_width="319dp"
         android:layout_height="108dp"
         android:layout_marginStart="30dp"
@@ -101,7 +101,7 @@
         android:inputType="number"
         android:maxLength="6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPreWorkoutStretches" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedWorkoutStretches" />
 
 
     <EditText
@@ -115,10 +115,10 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPreWorkoutStretches" />
+        app:layout_constraintTop_toBottomOf="@+id/ConfirmedWorkoutStretches" />
 
     <Button
-        android:id="@+id/confirmedStartWorkout"
+        android:id="@+id/ConfirmedStartWorkout"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
