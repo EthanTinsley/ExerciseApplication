@@ -185,7 +185,40 @@ public class ActiveExercise extends AppCompatActivity {
 
     }
 
+    protected void previousExercise() {
 
+        if (ActiveWorkout.hasPrevious()){
+
+            // Get the new current Exercise to display
+            currExercise = ActiveWorkout.previousExercise();
+
+            // Display Exercise Title
+            ActiveExerciseTitle.setText(currExercise.getName());
+
+            // Display Exercise Description
+            ActiveExerciseDescription.setText(currExercise.getDescription());
+
+            // Display Exercise Image
+            ActiveExerciseImage.setImageResource(currExercise.getImageID());
+
+            // Display Exercise Rep count
+            repCount = "Reps: " + currExercise.getRepCount();
+            ActiveExerciseRepCount.setText(repCount);
+
+            //Display Exercise Set Count
+            setCount = "Sets: " + currExercise.getSetCount();
+            ActiveExerciseSetCount.setText(setCount);
+
+            // Display Workout Progress
+            currPosition = ActiveWorkout.getIterator()+1;
+            ExerciseCounter = currPosition + "/" + maxPosition;
+            ActiveExerciseCount.setText(ExerciseCounter);
+
+            if (!ActiveWorkout.hasPrevious()){
+                PreviousExercise.setVisibility(View.GONE);
+            }
+        }
+    }
 
 
 }
