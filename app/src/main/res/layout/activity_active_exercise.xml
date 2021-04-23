@@ -8,7 +8,7 @@
     tools:context=".ActiveExercise">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/ActiveExerciseTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -23,13 +23,13 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
-        android:id="@+id/ActiveExerciseView"
+        android:id="@+id/ActiveExerciseImage"
         android:layout_width="325dp"
         android:layout_height="300dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/ActiveExerciseTitle"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -43,10 +43,10 @@
         android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ActiveExerciseView" />
+        app:layout_constraintTop_toBottomOf="@+id/ActiveExerciseImage" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/ActiveExerciseSetCount"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="35dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ActiveExerciseDescription" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/ActiveExerciseRepCount"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginTop="24dp"

@@ -9,88 +9,17 @@ public class Workout {
 	private int WorkoutID ;
 	private boolean completed ;
 	private String dateDay , dateMonth , dateYear , description , stretches;
-	private LinkedList <Exercise> ExerciseList = new LinkedList();
-	private ListIterator<Exercise> iterator ;
-	
-	
+	private List <Exercise> ExerciseList = new ArrayList<>();
+
+
 	public Workout(String Title) {
-		
+
 		this.Title = Title ;
-		
 	}
 
-	public boolean addExercise(Exercise newExercise) {
-		
-		if(ExerciseList.contains(newExercise) != true) return ExerciseList.add(newExercise);
-		else return false ;
-		
-	}
-	
-	public boolean removeExercise(Exercise Exercise) {
-		
-		return ExerciseList.remove(Exercise);
-		
-	}
-	
-	public boolean swapPositions(Exercise Exercise01 , Exercise Exercise02) {
 
-		if ( ExerciseList.contains(Exercise01) && ExerciseList.contains(Exercise02) ) {
-			
-			int index01 = ExerciseList.indexOf(Exercise01);
-			int index02 = ExerciseList.indexOf(Exercise02);
-		
-			ExerciseList.add(index02, Exercise01);
-			ExerciseList.add(index01, Exercise02);
-		
-			return true ;
-		
-		}
-		else return false ;
-	}
-	
-	public int getPosition(Exercise Exercise) {
-		
-		int index = ExerciseList.indexOf(Exercise) ;
-		
-		return index ;
-	}
-	
-	public int getSize() {
-		
-		return ExerciseList.size() ;
-	}
-	
-	public int getCurrentIndex() {
-		return iterator.nextIndex() - 1 ;
-	}
-	
-	public boolean startWorkout() {
-		iterator = ExerciseList.listIterator() ;
-		return true ;
-	}
-	
-	
-	public boolean hasNext() {
-		if (iterator.hasNext() == true ) return true ;
-		else return false ;
-	}
-	
-	public Exercise nextExercise() {
-		if ( iterator.hasNext() == true ) return iterator.next();
-		else return null  ;
-	}
-	
-	public boolean hasPrevious() {
-		if (iterator.hasPrevious() == true ) return true ;
-		else return false ;
-	}
-	
-	public Exercise previousExercise() {
-		if (iterator.previousIndex() != -1) return iterator.previous() ;
-		else return null ;
-	}
-	
-	
+
+	// Generated Getters and Setters
 	public String getTitle() {
 		return Title;
 	}
@@ -139,21 +68,21 @@ public class Workout {
 		this.dateYear = dateYear;
 	}
 
-	public LinkedList<Exercise> getExerciseList() {
-		return ExerciseList;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setExerciseList(LinkedList<Exercise> exerciseList) {
-		ExerciseList = exerciseList;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public void setDescription(String description){ this.description = description ; }
+	public String getStretches() {
+		return stretches;
+	}
 
-	public String getDescription(){ return description ;}
-
-	public void setStretches(String stretches){ this.stretches = stretches ;}
-
-	public String getStretches(){ return stretches ;}
+	public void setStretches(String stretches) {
+		this.stretches = stretches;
+	}
 
 	public String toString() {
 		return Title ;

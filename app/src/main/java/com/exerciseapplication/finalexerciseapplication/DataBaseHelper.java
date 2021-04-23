@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
@@ -320,6 +321,52 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
+public LinkedList<Exercise> fillWorkout(String WorkoutName){
+
+    // List to hold the Exercises returned by search query
+    LinkedList<Exercise> addedExercises = new LinkedList<>();
+
+    // get data from the database
+    String query = "SELECT * FROM " + EXERCISE_TABLE + " WHERE " + TEMPLATE_ID + " IN ( SELECT " +
+            TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE + " = " + '"' +
+            WorkoutName + '"' + " );" ;
+
+    System.out.println(query);
+
+    // Create instance of the database
+    SQLiteDatabase database = this.getReadableDatabase();
+    // holds results
+    Cursor result = database.rawQuery(query, null);
+
+    if (result.moveToFirst()) {
+        do {
+            int TemplateID = result.getInt(0);
+            int ExerciseID = result.getInt(1);
+            String ExerciseName = result.getString(2);
+            String ExerciseDescription = result.getString(3);
+            int ExerciseImageID = result.getInt(4);
+            int repCount = result.getInt(5);
+            int setCount = result.getInt(6);
+
+            Exercise exercise = new Exercise(ExerciseName);
+            exercise.setDescription(ExerciseDescription);
+            exercise.setImageID(ExerciseImageID);
+            exercise.setRepCount(repCount);
+            exercise.setSetCount(setCount);
+
+            System.out.println(exercise);
+
+            addedExercises.add(exercise);
+
+        } while( result.moveToNext());
+
+    }
+
+    result.close();
+    database.close();
+    return addedExercises ; // return list of exercises
+
+}
 
 
 }
