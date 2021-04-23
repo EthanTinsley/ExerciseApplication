@@ -10,6 +10,7 @@ public class Workout {
 	private boolean completed ;
 	private String dateDay , dateMonth , dateYear , description , stretches;
 	private List <Exercise> ExerciseList = new ArrayList<>();
+	private int Iterator = 0;
 
 
 	public Workout(String Title) {
@@ -17,9 +18,89 @@ public class Workout {
 		this.Title = Title ;
 	}
 
+	public Workout (String Title, List<Exercise> ExerciseList){
+		this.Title = Title ;
+		this.ExerciseList = ExerciseList;
+	}
+
+	public boolean addExercise(Exercise Exercise) {
+		if ( ExerciseList.add(Exercise)) return true;
+		else return false;
+	}
+
+	public Exercise getFirstExercise(){
+
+		return ExerciseList.get(0);
+
+	}
+
+	public Exercise nextExercise(){
+
+		if (hasNext() == true) {
+			Iterator++;
+			return ExerciseList.get(Iterator);
+		}
+		else return null;
+	}
+
+	public Exercise previousExercise(){
+
+		if (hasPrevious() == true) {
+			Iterator--;
+			return ExerciseList.get(Iterator);
+		}
+		else return null ;
+
+	}
+
+	public Exercise getExercise() {
+
+		return ExerciseList.get(Iterator);
+
+	}
+
+	public boolean hasNext(){
+
+		if (ExerciseList.size()-1 <= Iterator) return false ;
+		else return true ;
+
+	}
+
+	public boolean hasPrevious(){
+
+		if (Iterator > 0 ) return true ;
+		else return false ;
+
+	}
+
+	public void setExerciseList(List<Exercise> List){
+
+		ExerciseList = List;
+
+	}
+
+	public int getIterator(){
+		return Iterator ;
+	}
+
+	public Exercise getExerciseAtIndex(int index){
+
+		return ExerciseList.get(index);
+
+	}
+
+	public int getExerciseCount(){
+
+		return ExerciseList.size();
+
+	}
 
 
 	// Generated Getters and Setters
+	public void setIterator(int Iterator){
+		this.Iterator = Iterator ;
+	}
+
 	public String getTitle() {
 		return Title;
 	}

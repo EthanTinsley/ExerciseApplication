@@ -60,9 +60,11 @@ public class WorkoutStartConfirmation extends AppCompatActivity {
 
                 Toast.makeText(WorkoutStartConfirmation.this, "Success!", Toast.LENGTH_SHORT).show();
 
+                BeginWorkoutIntent = new Intent(view.getContext(), ActiveExercise.class);
                 BeginWorkoutIntent.putExtra("WorkoutTitle", WorkoutTitle);
                 // BeginWorkoutIntent.putExtra("WorkoutDescription", WorkoutDescription);
                 // BeginWorkoutIntent.putExtra("WorkoutStretches", WorkoutStretches);
+                startActivityForResult(BeginWorkoutIntent,0);
             }
         });
     }

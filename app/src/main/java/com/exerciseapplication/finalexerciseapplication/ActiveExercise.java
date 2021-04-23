@@ -1,93 +1,158 @@
 package com.exerciseapplication.finalexerciseapplication;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.security.spec.ECField;
 import java.util.LinkedList;
+import java.util.List;
 
 public class ActiveExercise extends AppCompatActivity {
 
-    TextView ActiveExerciseTitle ;
-    TextView ActiveExerciseDescription;
-    TextView ActiveExerciseRepCount ;
-    TextView ActiceExerciseSetCount ;
-    ImageView ActiveExerciseImage;
+    protected TextView ActiveExerciseTitle ;
+    protected TextView ActiveExerciseDescription ;
+    protected TextView ActiveExerciseRepCount ;
+    protected TextView ActiveExerciseSetCount ;
+    protected TextView ActiveExerciseCount ;
+    protected ImageView ActiveExerciseImage ;
 
-    Button PreviousExercise ;
-    Button NextExercise ;
-    Button EndWorkout ;
+    protected Button PreviousExercise ;
+    protected Button NextExercise ;
+    protected Button EndWorkout ;
 
-    String WorkoutName ;
-    String ExerciseName ;
-    String ExerciseDescription;
-    String WorkoutPosition ;
-    int ExerciseImageID ;
-    int repCount ;
-    int setCount ;
+    protected String WorkoutName;
+    protected String ExerciseName ;
+    protected String ExerciseDescription;
+    protected String WorkoutPosition ;
+    protected String ExerciseCounter;
+    protected String repCount ;
+    protected String setCount ;
+    protected int currPosition;
+    protected int maxPosition;
+    protected int Iterator ;
+    protected int ExerciseImageID ;
 
-    Workout ActiveWorkout ;
-    LinkedList<Exercise> ExerciseList ;
+    protected DataBaseHelper DataBaseHelper ;
+    protected Exercise currExercise ;
+    protected List<Exercise> ExerciseList;
+    protected Workout ActiveWorkout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_active_exercise);
 
-        // Need to get the identity of the assests being utilized
-        // Need to get the resource value for ActiveExerciseTitle
+        // First we need to identify the componetns being used in the layout
+        // find the title
         ActiveExerciseTitle = (TextView) findViewById(R.id.ActiveExerciseTitle);
 
-        //Need to get the resource value for ActiveExerciseDescripton
+        // find the Description
         ActiveExerciseDescription = (TextView) findViewById(R.id.ActiveExerciseDescription);
 
-        // Need to get the resource value for ActiveExerciseRepCount
+        // find the repCount
         ActiveExerciseRepCount = (TextView) findViewById(R.id.ActiveExerciseRepCount);
 
-        // Need to get resource value for ActiveExerciseSetCount
-        ActiceExerciseSetCount = (TextView) findViewById(R.id.ActiveExerciseSetCount);
+        // find the setCount
+        ActiveExerciseSetCount = (TextView) findViewById(R.id.ActiveExerciseSetCount);
 
-        //Need to get resource value for ActiveExerciseImage
+        // find the Amount of Exercises
+        ActiveExerciseCount = (TextView) findViewById(R.id.ActiveExerciseCount);
+
+        // find the Exercise Image
         ActiveExerciseImage = (ImageView) findViewById(R.id.ActiveExerciseImage);
 
-        // Need to get resource values for buttons
-        // Get resource value of PreviousExercise
+        // Identify the buttons on the layout
+        // Previous Button
         PreviousExercise = (Button) findViewById(R.id.PreviousExerciseButton);
 
-        //Get Resource value for NextExercise Button
+        // Next Button
         NextExercise = (Button) findViewById(R.id.NextExerciseButton);
 
-        // Get resource value for end workout button
-        EndWorkout = (Button) findViewById(R.id.EndWorkoutButton);
+        // End Button
+        EndWorkout  = (Button) findViewById(R.id.EndWorkoutButton);
 
-        // Use an intent to get the workoutName
-        WorkoutName = getIntent().getStringExtra("WorkoutTitle");
+        // Retrieve the name of the workout to use in the database calls
+        WorkoutName = getIntent().getStringExtra("WorkoutTitle"); ;
 
-        //Create Workout Object
-        ActiveWorkout = new Workout(WorkoutName);
+        // Create the database instance
+        // retrieve the List of exercises used in the workout
+        // Add Exercise list retrieved from database to the Workout object
+        DataBaseHelper = new DataBaseHelper(ActiveExercise.this);
 
-        // Retrieve the exercises in the Workout Through a database call
-        DataBaseHelper DataBaseHelper = new DataBaseHelper(ActiveExercise.this);
-        ExerciseList = DataBaseHelper.fillWorkout(WorkoutName);
+        // retrieve list
+        ExerciseList = DataBaseHelper.getAddedExercises(WorkoutName);
 
+        // Create Workout
+        ActiveWorkout = new Workout(WorkoutName, ExerciseList);
 
+        // Set layout attributes to the first exercise in the workout
+        // Layout Title
+        ActiveExerciseTitle.setText(ActiveWorkout.getExercise().getName());
+
+        // Layout Description
+        ActiveExerciseDescription.setText(ActiveWorkout.getExercise().getDescription());
+
+        //Layout Image
+        ActiveExerciseImage.setImageResource(ActiveWorkout.getExercise().getImageID());
+
+        // LAyout rep and set counts
+        // can't concatante inside .settext() so we do it beforehand
+        repCount = "Reps: " + ActiveWorkout.getExercise().getRepCount() ;
+        setCount = "Sets: " + ActiveWorkout.getExercise().getSetCount() ;
+        ActiveExerciseRepCount.setText(repCount);
+        ActiveExerciseSetCount.setText(setCount);
+
+        // Display that the current posiiton is 1/n Exercises
+        // Current Workout position
+        currPosition = ActiveWorkout.getIterator()+1;
+
+        // Max Exercises in a workout
+        maxPosition = ActiveWorkout.getExerciseCount();
+
+        // Current postition in workout
+        ExerciseCounter = "" + currPosition + "/" + maxPosition ;
+
+        // Change text to reflect current position
+        ActiveExerciseCount.setText(ExerciseCounter);
 
         // Make Buttons iterate through the workout object
+        // Next exercise Button
         NextExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
+                ActiveExerciseCount.setText("2/2");
+                Toast.makeText(ActiveExercise.this, "Success", Toast.LENGTH_SHORT).show();
+
             }
         });
-        // End button should give a toast, go to completed workouts and upload this workout to the datbase under completed
 
-        // by default make the layout the first exercise!
-        // Create methods outside on create that reset all the elements to the new exercise
-        // Dont show previous button until next exercise has been pressed 
+        //PreviousExercise button
+        PreviousExercise.setVisibility(View.GONE); // by default hide as there is no previous exercise
+        PreviousExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+
+            }
+        });
+
     }
+
+
+
+
+
+
 }
