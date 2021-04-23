@@ -361,7 +361,60 @@ public List<Workout> getCompletedWorkouts(){
     database.close();
     return workouts ;
 
+}
 
+public boolean finishWorkout(Workout CompletedWorkout){
+
+    // takes in a workout object and stores it into the database
+    SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
+    ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
+
+    // templateID keeps workouts unique inside database
+    int templateID = getTemplateID(CompletedWorkout.getTitle());
+    int workoutID = getNewCompletedWorkoutID(); // workout id --> database only
+
+    ContentValues.put(TEMPLATE_ID, templateID);
+    ContentValues.put(TEMPLATE_TITLE, CompletedWorkout.getTitle());
+    ContentValues.put(WORKOUT_ID, workoutID);
+    ContentValues.put(WORKOUT_DATE, CompletedWorkout.getDateTotal());
+    ContentValues.put(WORKOUT_DURATION, CompletedWorkout.getDuration());
+    ContentValues.put(WORKOUT_TIME, CompletedWorkout.getTime());
+
+    // use insert to store the data in the database
+    // imsert will return -1 if it fails
+    // if it does not return -1 then return that the workout it true
+    long insert = database.insert(WORKOUT_TEMPLATE_TABLE,null, ContentValues);
+
+    database.close();
+
+    if (insert == -1) return false ; // if workout upload to database fails
+    else return true ; // if workout upload works correctly
+}
+
+public int getNewCompletedWorkoutID(){
+
+    // get the max workout template id from database
+    int workoutID = 1;
+
+    // query to get the highest id value
+    String query = "SELECT MAX(" + WORKOUT_ID + ") FROM " + WORKOUT_COMPLETED_TABLE ;
+
+    // creating a database object to read from the database
+    SQLiteDatabase database = this.getReadableDatabase() ;
+
+    // used to store results in a list
+    Cursor result = database.rawQuery(query,null);
+
+    // getting the results from the result list
+    if (result.moveToFirst()) {
+        workoutID = result.getInt(0) + 1;
+    }
+    else {
+        // if cursor returns nothing - do nothing
+    }
+
+    result.close();
+    return workoutID  ; // new workout template ID
 }
 
 

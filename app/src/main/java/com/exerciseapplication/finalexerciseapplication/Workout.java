@@ -176,9 +176,15 @@ public class Workout {
 
 	public void setDateTotal(String Date){ this.dateTotal = Date ;	}
 
+	public String getDateTotal (){ return dateTotal	; }
+
 	public void setDuration(String Duration){ this.duration = Duration; }
 
+	public String getDuration(){ return duration ;}
+
 	public void setTime(String Time){ this.time = Time; }
+
+	public String getTime(){ return time ;}
 
 	public String toString() {
 		return Title ;
