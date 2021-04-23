@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -52,9 +53,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         String CreateCompletedWorkoutTableStatement = "CREATE TABLE " + WORKOUT_COMPLETED_TABLE + " (\n" +
                 TEMPLATE_ID + " int ,\n" +
                 WORKOUT_ID + " int,\n" +
-                WORKOUT_DURATION + " double ,\n" +
-                WORKOUT_DATE + " date ,\n" +
-                WORKOUT_TIME + " time ,\n" +
+                TEMPLATE_TITLE +  " VARCHAR(255) ,\n" +
+                WORKOUT_DURATION + " VARCHAR(255) ,\n" +
+                WORKOUT_DATE + " VARCHAR(255) ,\n" +
+                WORKOUT_TIME + " VARCHAR(255) ,\n" +
                 "PRIMARY KEY(" + TEMPLATE_ID + " , " + WORKOUT_ID + "),\n" +
                 "FOREIGN KEY(" + TEMPLATE_ID + ") REFERENCES " + WORKOUT_TEMPLATE_TABLE + "(" + TEMPLATE_ID + ")) ;\n" + "\n" ;
 
@@ -321,50 +323,44 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
-public LinkedList<Exercise> fillWorkout(String WorkoutName){
 
-    // List to hold the Exercises returned by search query
-    LinkedList<Exercise> addedExercises = new LinkedList<>();
+public List<Workout> getCompletedWorkouts(){
 
-    // get data from the database
-    String query = "SELECT * FROM " + EXERCISE_TABLE + " WHERE " + TEMPLATE_ID + " IN ( SELECT " +
-            TEMPLATE_ID + " FROM " + WORKOUT_TEMPLATE_TABLE + " WHERE " + TEMPLATE_TITLE + " = " + '"' +
-            WorkoutName + '"' + " );" ;
+    // create list to hold workouts
+    List<Workout> workouts = new ArrayList<>();
 
-    System.out.println(query);
+    // Create the query to return all workouts
+    String query = "SELECT * FROM " + WORKOUT_COMPLETED_TABLE ;
 
-    // Create instance of the database
-    SQLiteDatabase database = this.getReadableDatabase();
-    // holds results
-    Cursor result = database.rawQuery(query, null);
+    // Create database instance
+    SQLiteDatabase database = getReadableDatabase();
 
-    if (result.moveToFirst()) {
-        do {
-            int TemplateID = result.getInt(0);
-            int ExerciseID = result.getInt(1);
-            String ExerciseName = result.getString(2);
-            String ExerciseDescription = result.getString(3);
-            int ExerciseImageID = result.getInt(4);
-            int repCount = result.getInt(5);
-            int setCount = result.getInt(6);
+    // Create results list to hold query results
+    Cursor results = database.rawQuery(query,null);
 
-            Exercise exercise = new Exercise(ExerciseName);
-            exercise.setDescription(ExerciseDescription);
-            exercise.setImageID(ExerciseImageID);
-            exercise.setRepCount(repCount);
-            exercise.setSetCount(setCount);
+    // assing results from database to workout object and then add into the list
+    if (results.moveToFirst()){
+        do{
 
-            System.out.println(exercise);
+            String workoutTitle = results.getString(3);
+            String workoutDuration = results.getString(4);
+            String workoutDate = results.getString(5);
+            String workoutTime = results.getString(6);
 
-            addedExercises.add(exercise);
+            Workout NewWorkout = new Workout(workoutTitle);
+            NewWorkout.setDuration(workoutDuration);
+            NewWorkout.setDateTotal(workoutDate);
+            NewWorkout.setTime(workoutTime);
 
-        } while( result.moveToNext());
+            workouts.add(NewWorkout);
 
+        } while(results.moveToNext());
     }
 
-    result.close();
+    results.close();
     database.close();
-    return addedExercises ; // return list of exercises
+    return workouts ;
+
 
 }
 

@@ -8,7 +8,7 @@ public class Workout {
 	private String Title ;
 	private int WorkoutID ;
 	private boolean completed ;
-	private String dateDay , dateMonth , dateYear , description , stretches;
+	private String dateTotal , dateDay , dateMonth , dateYear , description , stretches ,duration, time ;
 	private List <Exercise> ExerciseList = new ArrayList<>();
 	private int Iterator = 0;
 
@@ -95,6 +95,15 @@ public class Workout {
 
 	}
 
+	public String getCompletedInfo(){
+
+		String result;
+
+		result = "Workout Title: " + Title + "\n" +
+				 "Workout Date: " + dateTotal + "\n" +
+				 "Workout Duration" + duration ;
+		return  result ;
+	}
 
 	// Generated Getters and Setters
 	public void setIterator(int Iterator){
@@ -164,6 +173,12 @@ public class Workout {
 	public void setStretches(String stretches) {
 		this.stretches = stretches;
 	}
+
+	public void setDateTotal(String Date){ this.dateTotal = Date ;	}
+
+	public void setDuration(String Duration){ this.duration = Duration; }
+
+	public void setTime(String Time){ this.time = Time; }
 
 	public String toString() {
 		return Title ;
