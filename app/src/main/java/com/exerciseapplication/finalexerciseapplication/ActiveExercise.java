@@ -92,7 +92,7 @@ public class ActiveExercise extends AppCompatActivity {
         ExerciseList = DataBaseHelper.getAddedExercises(WorkoutName);
 
         // Create Workout
-        ActiveWorkout = new Workout(WorkoutName, ExerciseList);
+        this.ActiveWorkout = new Workout(WorkoutName, ExerciseList);
 
         // Set layout attributes to the first exercise in the workout
         // Layout Title
@@ -130,9 +130,7 @@ public class ActiveExercise extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-                ActiveExerciseCount.setText("2/2");
-                Toast.makeText(ActiveExercise.this, "Success", Toast.LENGTH_SHORT).show();
+            nextExercise();
 
             }
         });
@@ -151,6 +149,41 @@ public class ActiveExercise extends AppCompatActivity {
     }
 
 
+
+    protected void nextExercise(){
+
+        if (ActiveWorkout.hasNext()) {
+
+            // Get the new current Exercise to display
+            currExercise = ActiveWorkout.nextExercise();
+
+            // Display Exercise Title
+            ActiveExerciseTitle.setText(currExercise.getName());
+
+            // Display Exercise Description
+            ActiveExerciseDescription.setText(currExercise.getDescription());
+
+            // Display Exercise Image
+            ActiveExerciseImage.setImageResource(currExercise.getImageID());
+
+            // Display Exercise Rep count
+            repCount = "Reps: " + currExercise.getRepCount();
+            ActiveExerciseRepCount.setText(repCount);
+
+            //Display Exercise Set Count
+            setCount = "Sets: " + currExercise.getSetCount();
+            ActiveExerciseSetCount.setText(setCount);
+
+            // Display Workout Progress
+            currPosition = ActiveWorkout.getIterator()+1;
+            ExerciseCounter = currPosition + "/" + maxPosition;
+            ActiveExerciseCount.setText(ExerciseCounter);
+
+        }
+
+        PreviousExercise.setVisibility(View.VISIBLE);
+
+    }
 
 
 
