@@ -10,7 +10,17 @@ public class MuscleGroupSelection extends AppCompatActivity {
 
     boolean buildingWorkout ;
     String WorkoutTitle ;
-    Intent NewIntent ;
+
+    protected Button ShoulderExercises ;
+    protected Button BicepExercises ;
+    protected Button TricepExercises ;
+    protected Button ForearmExercises ;
+    protected Button ChestExercises ;
+    protected Button BackExercises ;
+    protected Button AbdominalExercises ;
+    protected Button GlutesExercises ;
+    protected Button HamstringsExercises ;
+    protected Button CalvesExercises ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +34,7 @@ public class MuscleGroupSelection extends AppCompatActivity {
         if (buildingWorkout == true) WorkoutTitle = getIntent().getStringExtra("WorkoutTitle") ;
 
 
-        Button ShoulderExercises = (Button) findViewById(R.id.ShouldersButton) ;
+        ShoulderExercises = (Button) findViewById(R.id.ShouldersButton) ;
         ShoulderExercises.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,6 +47,38 @@ public class MuscleGroupSelection extends AppCompatActivity {
                 startActivityForResult(shoulders,0);
             }
         });
+
+        BicepExercises = (Button) findViewById(R.id.BicepButton);
+        BicepExercises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Biceps = new Intent(view.getContext() , BicepExercises.class) ;
+
+                if (buildingWorkout == true) {
+                    Biceps.putExtra("BuildingWorkout", buildingWorkout);
+                    Biceps.putExtra("WorkoutTitle", WorkoutTitle);
+                }
+                startActivityForResult(Biceps,0);
+
+            }
+        });
+
+        TricepExercises = (Button) findViewById(R.id.TricepButton);
+        TricepExercises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Triceps = new Intent(view.getContext() , TricepExercises.class) ;
+
+                if (buildingWorkout == true) {
+                    Triceps.putExtra("BuildingWorkout", buildingWorkout);
+                    Triceps.putExtra("WorkoutTitle", WorkoutTitle);
+                }
+                startActivityForResult(Triceps,0);
+
+            }
+        });
+
+
 
 
 
