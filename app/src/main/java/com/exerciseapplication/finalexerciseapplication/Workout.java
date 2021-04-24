@@ -100,8 +100,7 @@ public class Workout {
 		String result;
 
 		result = "Workout Title: " + Title + "\n" +
-				 "Workout Date: " + dateTotal + "\n" +
-				 "Workout Time: " + time + "\n" +
+				 "Workout Time: " + dateTotal + "\n" +
 				 "Workout Duration" + duration ;
 		return  result ;
 	}

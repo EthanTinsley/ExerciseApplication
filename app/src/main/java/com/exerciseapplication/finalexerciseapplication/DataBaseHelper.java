@@ -342,10 +342,10 @@ public List<Workout> getCompletedWorkouts(){
     if (results.moveToFirst()){
         do{
 
-            String workoutTitle = results.getString(3);
-            String workoutDuration = results.getString(4);
-            String workoutDate = results.getString(5);
-            String workoutTime = results.getString(6);
+            String workoutTitle = results.getString(2);
+            String workoutDuration = results.getString(3);
+            String workoutDate = results.getString(4);
+            String workoutTime = results.getString(5);
 
             Workout NewWorkout = new Workout(workoutTitle);
             NewWorkout.setDuration(workoutDuration);
@@ -383,7 +383,7 @@ public boolean finishWorkout(Workout CompletedWorkout){
     // use insert to store the data in the database
     // imsert will return -1 if it fails
     // if it does not return -1 then return that the workout it true
-    long insert = database.insert(WORKOUT_TEMPLATE_TABLE,null, ContentValues);
+    long insert = database.insert(WORKOUT_COMPLETED_TABLE,null, ContentValues);
 
     database.close();
 

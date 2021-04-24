@@ -34,7 +34,7 @@ public class CompletedWorkouts extends AppCompatActivity {
         Workouts = DataBaseHelper.getCompletedWorkouts();
 
         // find the ListView in resources
-        WorkoutListView = findViewById(R.id.workoutTemplatesListView);
+        WorkoutListView = findViewById(R.id.CompletedWorkoutsListView);
 
         // create the object to hold the workouts
         workoutArrayAdapter = new ArrayAdapter<Workout>(CompletedWorkouts.this, android.R.layout.simple_list_item_1, Workouts);
@@ -53,7 +53,7 @@ public class CompletedWorkouts extends AppCompatActivity {
                 // Display the user selection in a Toast
                 String WorkoutOverview = ListViewSelectedWorkout.getCompletedInfo();
 
-                Toast.makeText(CompletedWorkouts.this, WorkoutOverview, Toast.LENGTH_SHORT).show();
+                Toast.makeText(CompletedWorkouts.this, WorkoutOverview, Toast.LENGTH_LONG).show();
             }
         });
 

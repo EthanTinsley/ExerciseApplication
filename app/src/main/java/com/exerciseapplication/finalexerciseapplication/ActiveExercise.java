@@ -68,7 +68,7 @@ public class ActiveExercise extends AppCompatActivity {
         setContentView(R.layout.activity_active_exercise);
 
         // Record the date when workout starts
-        StartTime.getTime();
+        StartTime = new Date();
         TimerStart = StartTime.getTime();
 
         // First we need to identify the componetns being used in the layout
@@ -175,6 +175,9 @@ public class ActiveExercise extends AppCompatActivity {
                 endWorkout() ;
                 Toast.makeText(ActiveExercise.this, CompletedWorkoutString, Toast.LENGTH_LONG).show();
 
+                Intent EndWorkoutIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(EndWorkoutIntent,0);
+
             }
         });
 
@@ -255,6 +258,7 @@ public class ActiveExercise extends AppCompatActivity {
     protected void endWorkout(){
 
         // find the duration of the workout by subtracting start time from end time
+        EndTime = new Date() ;
         TimerEnd = EndTime.getTime() ;
         WorkoutDuration = TimerEnd - TimerStart ;
         WorkoutDuration = WorkoutDuration / 1000 ; // Format from miliseconds to seconds
@@ -276,12 +280,13 @@ public class ActiveExercise extends AppCompatActivity {
         ActiveWorkout.setDuration(DurationString);
         ActiveWorkout.setTime(StartTime.toString());
 
-        DataBaseHelper.finishWorkout(ActiveWorkout);
+        if(DataBaseHelper.finishWorkout(ActiveWorkout)) {
 
-        CompletedWorkoutString = "Workout: " + ActiveWorkout.getTitle() + " Completed! " + "\n" +
-                "Duration: " + ActiveWorkout.getDuration() + "\n" + "test date " + ActiveWorkout.getDateTotal() + "\n" +
-                "test time: " + ActiveWorkout.getTime();
+            CompletedWorkoutString = "Workout: " + ActiveWorkout.getTitle() + " Completed! " + "\n" +
+                    "Duration: " + ActiveWorkout.getDuration() + "\n" + "Date and Time: "
+                    + ActiveWorkout.getDateTotal() ;
 
+        } else CompletedWorkoutString = "Database Upload Failed" ;
     }
 
 
