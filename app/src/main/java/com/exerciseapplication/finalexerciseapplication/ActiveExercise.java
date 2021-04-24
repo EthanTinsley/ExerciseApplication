@@ -3,6 +3,7 @@ package com.exerciseapplication.finalexerciseapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.health.TimerStat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.security.spec.ECField;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Timer;
 
 public class ActiveExercise extends AppCompatActivity {
 
@@ -35,21 +40,36 @@ public class ActiveExercise extends AppCompatActivity {
     protected String ExerciseCounter;
     protected String repCount ;
     protected String setCount ;
+    protected String DurationString;
+    protected String CompletedWorkoutString ;
+
     protected int currPosition;
     protected int maxPosition;
     protected int Iterator ;
     protected int ExerciseImageID ;
+
 
     protected DataBaseHelper DataBaseHelper ;
     protected Exercise currExercise ;
     protected List<Exercise> ExerciseList;
     protected Workout ActiveWorkout;
 
+    protected Date StartTime ;
+    protected Date EndTime ;
+
+    protected long TimerStart ;
+    protected long TimerEnd ;
+    protected long WorkoutDuration ;
+    protected long TimeOfWorkout ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_active_exercise);
+
+        // Record the date when workout starts
+        StartTime.getTime();
+        TimerStart = StartTime.getTime();
 
         // First we need to identify the componetns being used in the layout
         // find the title
@@ -141,7 +161,19 @@ public class ActiveExercise extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            previousExercise();
 
+            }
+        });
+
+        //EndWorkoutButton
+        EndWorkout = (Button) findViewById(R.id.EndWorkoutButton);
+        EndWorkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                endWorkout() ;
+                Toast.makeText(ActiveExercise.this, CompletedWorkoutString, Toast.LENGTH_LONG).show();
 
             }
         });
@@ -218,6 +250,38 @@ public class ActiveExercise extends AppCompatActivity {
                 PreviousExercise.setVisibility(View.GONE);
             }
         }
+    }
+
+    protected void endWorkout(){
+
+        // find the duration of the workout by subtracting start time from end time
+        TimerEnd = EndTime.getTime() ;
+        WorkoutDuration = TimerEnd - TimerStart ;
+        WorkoutDuration = WorkoutDuration / 1000 ; // Format from miliseconds to seconds
+
+        // Format Duration into a String
+        // if lasted more than 60 seconds convert to minutes
+        // if more than 60 minutes convert to hours
+        if (WorkoutDuration > 60){ // more than 60 seconds
+            WorkoutDuration /= 60 ;
+            if (WorkoutDuration > 60) { // more than 60 minutes
+                WorkoutDuration /= 60;
+                DurationString = WorkoutDuration + " Hours";
+            }
+            else DurationString = WorkoutDuration + " Minutes" ; // minutes
+        }
+        else DurationString = WorkoutDuration + " Seconds" ;
+
+        ActiveWorkout.setDateTotal(StartTime.toString());
+        ActiveWorkout.setDuration(DurationString);
+        ActiveWorkout.setTime(StartTime.toString());
+
+        DataBaseHelper.finishWorkout(ActiveWorkout);
+
+        CompletedWorkoutString = "Workout: " + ActiveWorkout.getTitle() + " Completed! " + "\n" +
+                "Duration: " + ActiveWorkout.getDuration() + "\n" + "test date " + ActiveWorkout.getDateTotal() + "\n" +
+                "test time: " + ActiveWorkout.getTime();
+
     }
 
 

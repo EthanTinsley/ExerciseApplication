@@ -101,6 +101,7 @@ public class Workout {
 
 		result = "Workout Title: " + Title + "\n" +
 				 "Workout Date: " + dateTotal + "\n" +
+				 "Workout Time: " + time + "\n" +
 				 "Workout Duration" + duration ;
 		return  result ;
 	}
