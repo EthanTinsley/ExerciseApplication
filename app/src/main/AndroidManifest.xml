@@ -16,6 +16,15 @@
         <activity android:name=".BuildWorkoutScreen" />
         <activity android:name=".ExerciseAddTemplate" />
         <activity android:name=".ShoulderExercises" />
+        <activity android:name=".BicepExercises" />
+        <activity android:name=".TricepExercises"/>
+        <activity android:name=".ForearmExercises"/>
+        <activity android:name=".ChestExercises"/>
+        <activity android:name=".BackExercises"/>
+        <activity android:name=".AbdominalExercises"/>
+        <activity android:name=".GluteExercises"/>
+        <activity android:name=".HamstringExercises"/>
+        <activity android:name=".CalvesExercises"/>
         <activity android:name=".MuscleGroupSelection" />
         <activity android:name=".CompletedWorkouts" />
         <activity android:name=".MainActivity">

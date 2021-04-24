@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
@@ -51,9 +53,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         String CreateCompletedWorkoutTableStatement = "CREATE TABLE " + WORKOUT_COMPLETED_TABLE + " (\n" +
                 TEMPLATE_ID + " int ,\n" +
                 WORKOUT_ID + " int,\n" +
-                WORKOUT_DURATION + " double ,\n" +
-                WORKOUT_DATE + " date ,\n" +
-                WORKOUT_TIME + " time ,\n" +
+                TEMPLATE_TITLE +  " VARCHAR(255) ,\n" +
+                WORKOUT_DURATION + " VARCHAR(255) ,\n" +
+                WORKOUT_DATE + " VARCHAR(255) ,\n" +
+                WORKOUT_TIME + " VARCHAR(255) ,\n" +
                 "PRIMARY KEY(" + TEMPLATE_ID + " , " + WORKOUT_ID + "),\n" +
                 "FOREIGN KEY(" + TEMPLATE_ID + ") REFERENCES " + WORKOUT_TEMPLATE_TABLE + "(" + TEMPLATE_ID + ")) ;\n" + "\n" ;
 
@@ -320,6 +323,99 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     }
 
+
+public List<Workout> getCompletedWorkouts(){
+
+    // create list to hold workouts
+    List<Workout> workouts = new ArrayList<>();
+
+    // Create the query to return all workouts
+    String query = "SELECT * FROM " + WORKOUT_COMPLETED_TABLE ;
+
+    // Create database instance
+    SQLiteDatabase database = getReadableDatabase();
+
+    // Create results list to hold query results
+    Cursor results = database.rawQuery(query,null);
+
+    // assing results from database to workout object and then add into the list
+    if (results.moveToFirst()){
+        do{
+
+            String workoutTitle = results.getString(2);
+            String workoutDuration = results.getString(3);
+            String workoutDate = results.getString(4);
+            String workoutTime = results.getString(5);
+
+            Workout NewWorkout = new Workout(workoutTitle);
+            NewWorkout.setDuration(workoutDuration);
+            NewWorkout.setDateTotal(workoutDate);
+            NewWorkout.setTime(workoutTime);
+
+            workouts.add(NewWorkout);
+
+        } while(results.moveToNext());
+    }
+
+    results.close();
+    database.close();
+    return workouts ;
+
+}
+
+public boolean finishWorkout(Workout CompletedWorkout){
+
+    // takes in a workout object and stores it into the database
+    SQLiteDatabase database = this.getWritableDatabase() ; // create database connection
+    ContentValues ContentValues = new ContentValues() ;    // Values to insert into database
+
+    // templateID keeps workouts unique inside database
+    int templateID = getTemplateID(CompletedWorkout.getTitle());
+    int workoutID = getNewCompletedWorkoutID(); // workout id --> database only
+
+    ContentValues.put(TEMPLATE_ID, templateID);
+    ContentValues.put(TEMPLATE_TITLE, CompletedWorkout.getTitle());
+    ContentValues.put(WORKOUT_ID, workoutID);
+    ContentValues.put(WORKOUT_DATE, CompletedWorkout.getDateTotal());
+    ContentValues.put(WORKOUT_DURATION, CompletedWorkout.getDuration());
+    ContentValues.put(WORKOUT_TIME, CompletedWorkout.getTime());
+
+    // use insert to store the data in the database
+    // imsert will return -1 if it fails
+    // if it does not return -1 then return that the workout it true
+    long insert = database.insert(WORKOUT_COMPLETED_TABLE,null, ContentValues);
+
+    database.close();
+
+    if (insert == -1) return false ; // if workout upload to database fails
+    else return true ; // if workout upload works correctly
+}
+
+public int getNewCompletedWorkoutID(){
+
+    // get the max workout template id from database
+    int workoutID = 1;
+
+    // query to get the highest id value
+    String query = "SELECT MAX(" + WORKOUT_ID + ") FROM " + WORKOUT_COMPLETED_TABLE ;
+
+    // creating a database object to read from the database
+    SQLiteDatabase database = this.getReadableDatabase() ;
+
+    // used to store results in a list
+    Cursor result = database.rawQuery(query,null);
+
+    // getting the results from the result list
+    if (result.moveToFirst()) {
+        workoutID = result.getInt(0) + 1;
+    }
+    else {
+        // if cursor returns nothing - do nothing
+    }
+
+    result.close();
+    return workoutID  ; // new workout template ID
+}
 
 
 }
