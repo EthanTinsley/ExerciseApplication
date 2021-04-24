@@ -39,7 +39,7 @@
         android:text="@string/SkullCrushers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tricepcablepushdownsButton" />
+        app:layout_constraintTop_toBottomOf="@id/dumbelltricepextensionsButton" />
 
     <Button
         android:id="@+id/tricepcablepushdownsButton"
@@ -69,25 +69,12 @@
         android:id="@+id/dipsbutton"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:background="@android:drawable/button_onoff_indicator_off"
         android:fontFamily="@font/bungee"
         android:text="@string/Dips"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/machinetriextButton" />
-
-    <Button
-        android:id="@+id/machinetriextButton"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:drawable/button_onoff_indicator_off"
-        android:fontFamily="@font/bungee"
-        android:text="@string/MachineTricepExtensions"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dumbelltricepextensionsButton" />
+        tools:layout_editor_absoluteY="219dp" />
 
     <Button
         android:id="@+id/dumbelltricepextensionsButton"

@@ -32,67 +32,107 @@
 
     Strings for Chest Exercises
     <string name="BenchPress">Barbell Bench Press</string>
-    <string name="BenchPressDescription">Barbell Bench Press</string>
+    <string name="BenchPressDescription">The barbell bench press is an upper-body weight training exercise in which the person lays flat on their
+    back on a weight training bench and pushes a barbell upwards towards the ceiling</string>
 
     <string name="InclineBenchPress">Incline Bench Press</string>
-    <string name="InclineBenchPressDescription">Incline Bench Press</string>
+    <string name="InclineBenchPressDescription">The incline barbell bench press is a version of the traditional bench press in which the bench is
+    positioned at about a 45 degree angle resulting in an inclined position</string>
 
     <string name="DeclineBenchPress">Decline Bench Press</string>
-    <string name="DeclineBenchPressDescription">Decline Bench Press</string>
+    <string name="DeclineBenchPressDescription">The decline bench press is another version of the traditional bench press in which the bench is set
+    to a 15 to 30 degree decline, placing the body on a downward slope</string>
 
-    <string name="CableFly">Cable Flys</string>
-    <string name="CableFlyDescription">Cable Flys</string>
+    <string name="CableFly">Cable Fly</string>
+    <string name="CableFlyDescription">A cable fly is performed on a machine with cable resistance usually in the standing position. One uses both sides
+    of the machine, on cable in each hand. The user pushes both arms out in front of them and then while keeping arms slightly bent, slowly releases both arms
+    at the same time back towards the machine. When getting to a point that is safe for the user, they will then pull these cables back to the original start
+    position in front of them, simulating a flying movement</string>
 
     <string name="DumbbellBenchPress">Dumbbell Bench Press</string>
-    <string name="DumbbellBenchPressDescription">Dumbbell Bench Press</string>
+    <string name="DumbbellBenchPressDescription">The dumbbell bench press is an upper-body weight training exercise in which the person lays flat on their
+    back on a weight training bench with a dumbbell in each hand and pushes the dumbbells upwards towards the ceiling</string>
 
     <string name="DeclineDumbbellBenchPress">Decline Dumbbell Bench Press</string>
-    <string name="DeclineDumbbellBenchPressDescription">Dumbbell Bench Press</string>
+    <string name="DeclineDumbbellBenchPressDescription">The decline dumbbell bench press is a version of the dumbbell bench press in which the bench is set
+    to a 15 to 30 degree decline, placing the body on a downward slope</string>
 
     <string name="InclineDumbbellBenchPress">Incline Dumbbell Bench Press</string>
-    <string name="InclineDumbbellBenchPressDescription">Dumbbell Bench Press</string>
+    <string name="InclineDumbbellBenchPressDescription">The incline dumbbell bench press is another version of the dumbbell bench press in which the bench is
+    positioned at about a 45 degree angle resulting in an inclined position</string>
 
     <string name="DumbbellFly">Dumbbell Fly</string>
-    <string name="DumbbellFlyDescription">Dumbbell Fly</string>
+    <string name="DumbbellFlyDescription">The dumbbell fly is a movement where the user uses two dumbbells and lies flat on their back on a bench holding the
+    dumbbell directly in front of them. The user then lowers both dumbbells towards their side while keeping their arms slightly bent. After reaching a safe
+    point, the user returns back to the start position and then repeats</string>
 
-    <string name="ChestPress">Chest Press</string>
-    <string name="ChestPressDescription">Chest Press</string>
-
-    <string name="Pushups">Chest Press</string>
-    <string name="PushupsDescription">Chest Press</string>
+    <string name="Pushups">Pushups</string>
+    <string name="PushupsDescription">The pushup is an exercise where a person lies facing the floor and, keeping their back straight, raises their body by
+    pressing down on their hands, pushing themselves up from the ground</string>
 
     Strings for forearms
 
     <string name="BarbellHolds">Barbell Holds</string>
+    <string name="BarbellHoldsDescription">The barbell hold is an exercise where the barbell is placed on a rack at hip level. The person then grabs the bar
+    with hands just outside of thighs and lifts the bar off of the rack holding the bar up with arms hanging down in front of them</string>
 
     <string name="HandGripper">Hand Gripper </string>
+    <string name="HandGripperDescription">The handgripper is a device that simulates a crushing movement. The person sets the resistance on the device in which
+    they would like to use then grabs the device and closes their hand against the resistance</string>
 
     <string name="PlatePinch">Plate Pinch</string>
+    <string name="PlatePinchDescription">A plate pinch is a movement a person does by grabbing a plate and picking it up using their fingers in a pinching motion
+    and holding the plate off of the ground for a certain amount of time</string>
 
     <string name="FarmersCarries">Farmer Carries</string>
+    <string name="FarmersCarriesDescription">A farmers carry involves a person holding a weight, either dumbbell or kettlebell, in each hand and walking for a
+    certain distance or time</string>
 
     Strings for Triceps
 
     <string name="DumbbellTricepExtensions">Dumbbell Tricep Extensions </string>
-
-    <string name="MachineTricepExtensions">Machine Tricep Extensions</string>
+    <string name="DumbbellTricepExtensionsDescription">To do a dumbbell tricep extension the person will start in a standing or sitting position with dumbbells
+    in each hand. The person raises the dumbbells above their head with arms extended out above. The dumbbells then slowly get lowered behind the head doing
+    best to not let the elbows flare out. When the forearms move slightly past parallel to the floor, bring weight back to starting position</string>
 
     <string name="Dips">Dips </string>
+    <string name="DipsDefinition">To perform a dip, a person uses a dip attachment or the edge of a bench/chair. If using an attachment, the person will hold their
+    body off of the ground and slowly lower themselves down and then after breaking the parallel point with their elbows, will push themselves back up into the
+    starting position. If using a chair/bench the user will grip the bench/chair with their fingers point down towards the floor and elbows pointed behind them.
+    The person will walk their feet out in front of them extending themselves out, slowly lower themselves down then pushing themselves back into the starting
+    position</string>
 
     <string name="SeatedTricepPress">Seated Tricep Press</string>
+    <string name="SeatedTricepPressDefinition">Tp perform the seated tricep extension the person will take one dumbbell at a time and get in a seated position.
+    the person will then put the dumbbell up on their shoulder, flaring their elbow out to the side. Once in position, the person will extend the dumbbell up to
+    the ceiling while doing best to keep elbow in the same position and then lowering the dumbbell back into the starting position</string>
 
     <string name="TricepCablePushdowns">Tricep Cable Pushdowns </string>
+    <string name="TricepCablePushdownsDescription">The machine tricep extension is used with a rope attachment on a cable machine. The person stands in front
+    of the rope and grasps with both hands. The person then lowers arms down and locks both elbows down by their side. The rope is then pushed down extending both
+    arms down towards the floor flaring at the bottom and then returning to starting position, keeping both elbows stuck to the side the entire time</string>
 
     <string name="SkullCrushers">Skull Crushers </string>
+    <string name="SkullCrushersDescription">The skullcrusher is used commonly with a preacher curl bar. The person will use this bar and lay flat on their back
+    extending their arms directly above them. While keeping their elbows pinched in, the person lowers the bar down close to the bridge of the nose, hence nose
+    buster, and then pushes the arms back to the original extended position</string>
 
     Strings for Shoulders
 
     <string name="SeatedOverheadWeightedPress">Seated Overhead Weighted Press</string>
-    <string name="SeatedOverheadWeightedPressDescription">Seated Overhead Weighted Press</string>
+    <string name="SeatedOverheadWeightedPressDescription">To perform this exercise, the person will start in a seated position with the bar racked to a similar height
+    in front of them. They will grip the bar and place it on their front shoulders with hands slightly wider then their shoulders. The person will then press
+    the bar over their head until the arms are fully extended and then lower the bar back to the front of the shoulders</string>
 
-    <string name="WeightedLateralRises">Weighted Lateral Raises </string>
+    <string name="WeightedLateralRaises">Weighted Lateral Raises </string>
+    <string name="WeightedLateralRaisesDescription">The lateral raise is performed with a dumbbell in each hand with arms fully extended down by the side. The
+    person will then, while keeping the arms straight and body locked into place, use their shoulder muscles to pull the dumbbells up to the ceiling at a 45 degree
+    angle from directly in front of them</string>
 
     <string name="WeightedFrontRaises">Weighted Front Raises </string>
+    <string name="WeightedFrontRaisesDescription">The front raise is similar to the lateral raise but except for the person raising the dumbbells at a 45 degree
+    angle, the user lifts them directly in front of them using the front part of their shoulder to do so while keeping the body locked in place and keeping the
+    arms locked out as well</string>
 
     <string name="WeightedUprightRows">Weighted Upright Rows</string>
 

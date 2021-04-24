@@ -56,18 +56,6 @@
         android:text="@string/Pushups"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ChestPressButton" />
-
-    <Button
-        android:id="@+id/ChestPressButton"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:drawable/button_onoff_indicator_off"
-        android:fontFamily="@font/bungee"
-        android:text="@string/ChestPress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/DumbellFlyButton" />
 
     <Button
