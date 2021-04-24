@@ -135,12 +135,16 @@
     arms locked out as well</string>
 
     <string name="WeightedUprightRows">Weighted Upright Rows</string>
+    <string name="WeightedUprightRowsDescription"></string>
 
     <string name="AronoldPress">Arnold Press </string>
+    <string name="AronoldPressDescription"></string>
 
     <string name="WeightedRearDeltRaises">Weighted Rear Delt Raises </string>
+    <string name="WeightedRearDeltRaisesDescription"></string>
 
     <string name="StandingOverheadWeightedPress">Standing Overhead Weighted Press</string>
+    <string name="StandingOverheadWeightedPressDescription"></string>
 
 
     Strings for Bicep Exercises
