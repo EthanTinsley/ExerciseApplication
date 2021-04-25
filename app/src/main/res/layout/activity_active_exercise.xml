@@ -39,6 +39,7 @@
         android:layout_marginTop="20dp"
         android:editable="false"
         android:gravity="center"
+        android:scrollbars="vertical"
         android:text="What if i were to put alot in this box and it took up multiple lines?"
         android:textColor="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
