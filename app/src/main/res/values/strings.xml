@@ -135,55 +135,87 @@
     arms locked out as well</string>
 
     <string name="WeightedUprightRows">Weighted Upright Rows</string>
+    <string name="WeightedUprightRowsDescription">To perform a weighted upright row, the person will load a barbell with a safe weight and lift the barbell from the
+    ground while in a standing position. The arms will be completely straightened in front of the person. The person will then pull the weight straight up, keeping
+    their elbows up the entire time and flared to the side. After pulling the weight straight up as high as the persons arms will let them, they will slowly
+    lower the weight back into the start position</string>
 
-    <string name="AronoldPress">Arnold Press </string>
+    <string name="ArnoldPress">Arnold Press </string>
+    <string name="ArnoldPressDescription">To do the arnold press, the person with start by standing with dumbbells in each hand, shoulder height, with elbows bent and
+    palms facing the body. The person brings the elbows out wide to the side while rotating hands so the palms face forward and pressing the dumbbells over head
+    until the arms are straight out. Pause at the top, and the reverse the movement to return to the start position</string>
 
     <string name="WeightedRearDeltRaises">Weighted Rear Delt Raises </string>
+    <string name="WeightedRearDeltRaisesDescription">The person will start belly down on an inclined bench. With dumbbells in each hand, the person will start with the
+    dumbbells raised out in front of them with palms facing down and pull the arms backwards slightly past the persons side and then return back to the starting
+    position</string>
 
     <string name="StandingOverheadWeightedPress">Standing Overhead Weighted Press</string>
+    <string name="StandingOverheadWeightedPressDescription">The person will start in a standing position with the barbell on the shoulders and palms facing up. The person
+    will then push the barbell over their heads fully extending their arms and then returning back to the starting position</string>
 
 
     Strings for Bicep Exercises
     <string name="DumbbellCurls">Dumbbell Curls</string>
-    <string name="DumbbellCurlDescription">Description Goes Here </string>
+    <string name="DumbbellCurlsDescription">To perform a dumbbell curl, the person will grab a dumbbell in one or both hands and curl the weight up to their shoulder and then
+    return to a fully extended position either to the side or front of the person</string>
 
     <string name="MachineDumbbellCurls">Machine Dumbbell Curls</string>
-    <string name="MachineDumbbellCurlsDescription">Machine Dumbbell Curls</string>
+    <string name="MachineDumbbellCurlsDescription">The person will go to a cable machine and attach a curl attachment of their choice. The machine height should be set close
+    to the ground. When ready the person will stand in front of the machine grabbing the attachment with both hands and curl both arms at the same time to the users chest or
+    shoulders and the return to the fully extended position</string>
 
     <string name="InclineDumbbellCurls">Incline Dumbbell Curls</string>
-    <string name="InclineDumbbellCurlsDescription">Incline Dumbbell Curls</string>
+    <string name="InclineDumbbellCurlsDescription">The incline dumbbell curls is a variation of the dumbbell curl in which the person is seated in an inclined weight bench, making
+    the arms go further back than a normal curl and lengthening the movement</string>
 
-    <string name="SittingPreacherCurls">Machine Dumbbell Curls</string>
-    <string name="SittingPreacherCurlsDescription">Machine Dumbbell Curls</string>
+    <string name="SittingPreacherCurls"Sitting Preacher Curls</string>
+    <string name="SittingPreacherCurlsDescription">The person will start in a seated position with a preacher curl bar gripped using both hands. They will then use both hands to curl
+    the bar up to the chest/shoulder area and return back to the starting position with arms fully extended out</string>
 
-    <string name="StrictPreacherCurls">Incline Dumbbell Curls</string>
-    <string name="StrictPreacherCurlsDescription">Incline Dumbbell Curls</string>
+    <string name="StrictPreacherCurls">Strict Preacher Curls</string>
+    <string name="StrictPreacherCurlsDescription">The strict preacher curl is a variation of the preacher curl in which the person will stand with their back against a wall with
+    a preacher curl bar and will perform the curls in this position. The wall will force the person to only use their arms and will not be able to use their body to help
+    curl the weight up making this work strictly on the arms</string>
 
 
     Strings for Back Exercises
     <string name="BarbellDeadlift">Barbell Deadlift</string>
-    <string name="BarbellDeadliftDescription">Barbell Deadlift </string>
+    <string name="BarbellDeadliftDescription">To perform the barbell deadlift, the person will start with the barbell on the ground at their feet in a standing position. The person will
+    then bend over, making sure to keep their back straight, and grab the bar lifting it up until they are standing straight up. After reaching the peak they will then return back
+    to the starting position on the floor</string>
 
     <string name="BarbellBentOverRow">Barbell Bent Over Row</string>
-    <string name="BarbellBentOverRowDescription">Barbell Bent Over Row</string>
+    <string name="BarbellBentOverRowDescription">The person will begin in the deadlift position and raise the bar off of the ground slightly being sure to keep the back straight,.
+    They will then pull the bar up to their chest with their arms while remaining in this bent over position and then extending the arms back to the starting position. The person
+    will continue this series of movements to complete this exercise</string>
 
     <string name="HexBarDeadlift">Hex Bar Deadlift</string>
-    <string name="HexBarDeadliftDescription">Hex Bar Deadlift</string>
+    <string name="HexBarDeadliftDescription">The hex bar deadlift is a variation of the barbell deadlift in which the person will use a hex bar deadlift setup to complete their
+    exercise. The person will stand in the middle of the hex bar and grab both handles on each side of the bar using these to pull the bar up until the person is standing
+    straight up</string>
 
     <string name="OneArmDumbbellRow">One Arm Dumbbell Row</string>
-    <string name="OneArmDumbbellRowDescription">One Arm Dumbbell Row</string>
+    <string name="OneArmDumbbellRowDescription">The one arm dumbbell row is a variation of the bent over row in which the person will graba dumbbell in one hand at a time and get in
+    the bent over position and use their arm to pull the dumbbell up to their chest then return back to the starting position with the arm fully locked out. The person will repeat
+    this same movement on their alternate arm as well</string>
 
     <string name="PendlayRow">Pendlay Row</string>
-    <string name="PendlayRowDescription">Pendlay Row </string>
+    <string name="PendlayRowDescription">The pendlay row is yet another version of the bent over row except the person will start with the barbell on the floor before each rep. After
+    the rep is reached on the peak, the person will return the barbell back to the floor each time</string>
 
     <string name="PullUps">Pull Ups</string>
-    <string name="PullupsDescription">Pull Ups</string>
+    <string name="PullupsDescription">The pull up is performed on any pull up bar. The person will grab a hold of the bar and lift their feet off of the ground. They will then pull
+    themselves up until their chin reaches the height of the bar then lower themselves back down until their arms are completely locked out</string>
 
     <string name="SeatedCableRow">Seated Cable Row</string>
-    <string name="SeatedCableRowDescription">Seated Cable Row</string>
+    <string name="SeatedCableRowDescription">The seated cable row is similar to the barbell row but the user is seated in a cable row machine. The person will grab the handle and
+    pull to their chest and return back to a fully extended position with their arms creating a "rowing" motion with their body</string>
 
     <string name="TBarRow">T Bar Row</string>
-    <string name="TBarRowDescription">T Bar Row</string>
+    <string name="TBarRowDescription">The t bar row is a variation of the barbell row in which on end of the barbell is attached in a landmine setup with the t bar attachment being
+    connected to the other side. The person will grab this t bar attachment with both hands and pull the attachment to their chest and then return back to the starting position with arms
+    fully extended out</string>
 
 
     Strings for Abdominal Exercises
