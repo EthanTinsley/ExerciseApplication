@@ -23,8 +23,12 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@android:drawable/ic_menu_revert"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="679dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/ShoulderExercisesTitle"
@@ -94,7 +98,7 @@
         android:layout_marginTop="8dp"
         android:background="@android:drawable/button_onoff_indicator_off"
         android:fontFamily="@font/bungee"
-        android:text="@string/AronoldPress"
+        android:text="@string/ArnoldPress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wtdUprightRowsButton" />

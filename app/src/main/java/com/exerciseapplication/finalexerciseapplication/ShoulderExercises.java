@@ -135,8 +135,8 @@ public class ShoulderExercises extends AppCompatActivity {
                     Exercise.putExtra("BuildingWorkout", BuildingWorkout);
                 }
 
-                ExerciseName = getString(R.string.AronoldPress).toString();
-                ExerciseDescription = getString(R.string.AronoldPressDescription).toString();
+                ExerciseName = getString(R.string.ArnoldPress).toString();
+                ExerciseDescription = getString(R.string.ArnoldPressDescription).toString();
                 imageID = R.drawable.arnoldpress;
 
                 Exercise.putExtra("ExerciseName", ExerciseName);
