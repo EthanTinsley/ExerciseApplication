@@ -11,7 +11,7 @@
         android:id="@+id/selectMuscleTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/bungee_inline"
         android:text="Please select muscle group:"
         android:textColor="?android:attr/textColorPrimary"
@@ -138,9 +138,12 @@
         android:background="@android:drawable/button_onoff_indicator_off"
         android:fontFamily="@font/bungee"
         android:text="@string/Calves"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HamstringsButton" />
+        app:layout_constraintTop_toBottomOf="@+id/HamstringsButton"
+        app:layout_constraintVertical_bias="0.074" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -152,5 +155,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="62dp"
+        android:layout_height="56dp"
+        android:background="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
