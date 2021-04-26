@@ -44,7 +44,7 @@ public class GluteExercises extends AppCompatActivity {
                     Exercise.putExtra("BuildingWorkout", BuildingWorkout);
                 }
 
-                ExerciseName = getString(R.string.BarbbellHipThrust).toString();
+                ExerciseName = getString(R.string.BarbellHipThrust).toString();
                 ExerciseDescription = getString(R.string.BarbellHipThrustDescription).toString();
                 imageID = R.drawable.barbellhipthrust;
 

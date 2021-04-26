@@ -132,8 +132,8 @@ public class CalvesExercises extends AppCompatActivity {
                     Exercise.putExtra("BuildingWorkout", BuildingWorkout);
                 }
 
-                ExerciseName = getString(R.string.StandingBarbbellCalfRaise).toString();
-                ExerciseDescription = getString(R.string.StandingBarbbellCalfRaiseDescription).toString();
+                ExerciseName = getString(R.string.StandingBarbellCalfRaise).toString();
+                ExerciseDescription = getString(R.string.StandingBarbellCalfRaiseDescription).toString();
                 imageID = R.drawable.standingbarbellcalfraise;
 
                 Exercise.putExtra("ExerciseName", ExerciseName);
