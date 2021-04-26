@@ -220,88 +220,120 @@
 
     Strings for Abdominal Exercises
     <string name="AbCrunchMachine">Ab Crunch Machine</string>
-    <string name="AbCrunchMachineDescription">Ab Crunch Machine </string>
+    <string name="AbCrunchMachineDescription">To use the ab crunch machine, the person will sit in an upright position inside the machine after setting a certain level of resistance. The
+    person will then curl their torso down towards their legs against the resistance that was set</string>
 
     <string name="AirBicycles">Air Bicycles</string>
-    <string name="AirBicyclesDescription">Air Bicycles</string>
+    <string name="AirBicyclesDescription">The person will lie on their back keeping their lower back pressed against the floor. Gently press both hands on the back of the head and lift your
+    upper body up slightly. The person will then extend the right leg without letting it touch the ground and keeping the left leg bent, using your abdominals, crunch up, extending your
+    right elbow to your left knee. The person will then alternate elbows and knees extending the left leg while bringing the right leg in and touch the left elbow to the right knee</string>
 
     <string name="Crunch">Crunch</string>
-    <string name="CrunchDescription">Crunch</string>
+    <string name="CrunchDescription">The person will lie flat on their back with their hands placed behind their heads and legs lifted up in the air and tucked towards their torso. The person will
+    then crunch their torso bringing their elbows to their knees and then return back to the floor</string>
 
     <string name="FlutterKick">Flutter Kick</string>
-    <string name="FlutterKickDescription">Flutter Kick</string>
+    <string name="FlutterKickDescription">The person will lie flat on their back with hands under their glutes and feet lifted slightly off the ground. The person will then lift one leg slightly higher
+    than the other and then lower the leg while raising the other leg up and repeat creating a fluttering motion with their legs and feet</string>
 
     <string name="LyingLegRaise">Lying Leg Raise</string>
-    <string name="LyingLegRaiseDescription">Lying Leg Raise </string>
+    <string name="LyingLegRaiseDescription">The person will lie flat on their back with feet out in front of them,slightly off of the grounf and hands under their glutes. The person will use their
+    abdominals to raise their legs up into the air and then lower legs back down until they are slightly off of the ground once again making sure to not rest their feet on the ground but
+    remaining above</string>
 
     <string name="Plank">Plank</string>
-    <string name="PlankDescription">Plank</string>
+    <string name="PlankDescription">The person will lie face down flat on the ground and use their forearms and elbows to post their upper body up and will use their forearms and toes to lift the
+    rest of their body off of the ground where these are the only points on the ground. The person will hold this position for a certain time before lowering themselves back down to the ground</string>
 
     <string name="RussianTwist">Russian Twist</string>
-    <string name="RussianTwistDescription">Russian Twist</string>
+    <string name="RussianTwistDescription">The person will begin on their back with their legs in the air and tucked towards their torso. The arms will be in front of the person on their chest.
+    The person will then twist to one side touching the ground with both hands and then will twist to the other side touching the ground there as well. The person will balance on the lower
+    part of their back suring this exercise</string>
 
     <string name="VUp">V Up</string>
-    <string name="VUpDescription">V Up</string>
+    <string name="VUpDescription">This is a variation of the lying leg raise in which the person will raise their upper body off of the ground reaching and touching their toes at the top of their
+    leg raise</string>
 
     <string name="AbdominalRollout">Abdominal Rollout</string>
-    <string name="AbdominalRolloutDescription">Abdominal Rollout</string>
+    <string name="AbdominalRolloutDescription">This exercise is completed with an ab roller device. The person will start on their knees with both hands on the device. They will then lean forward
+    rolling the device out and stretching their arms straight out in front of them. The ideal location to stop is slightly above the ground where arms are fully extended out in front of the
+    person and the face is just above the ground. The person will then use their abdominals to pull themselves back up using the roller as well to roll their arms back to the starting position
+    on their knees</string>
 
 
     Strings for Glutes Exercises
-    <string name="BarbbellHipThrust">Barbbell Hip Thrust</string>
-    <string name="BarbellHipThrustDescription">Barbbell Hip Thrust </string>
+    <string name="BarbellHipThrust">Barbell Hip Thrust</string>
+    <string name="BarbellHipThrustDescription">The person will use a weight bench to put their upper back on and will be sitting on the ground as well. The person will have the barbell will be relaxed
+    on the front hip crease. The person will have their feet firmly planted on the ground and will push up lifting their body off of the ground and thrusting their hips up towards the ceiling</string>
 
     <string name="CableKickback">Cable Kickback</string>
-    <string name="CableKickbackDescription">Cable Kickback</string>
+    <string name="CableKickbackDescription">The person will perform this exercise on a cable machine. They will attach the ankle attachment to their ankle and to the cable machine. The person will face
+    towards the machine and will throw their leg back behind them trying to imagine kicking something behind them. The person will kick as far back as they can and then will return back to the
+    start position, tapping their toe on the ground before kicking back once again</string>
 
     <string name="GluteBlaster">Glute Blaster</string>
-    <string name="GluteBlasterDescription">Glute Blaster</string>
+    <string name="GluteBlasterDescription">The glute blaster can be performed with a glute blaster set up or with a smith machine rack. This is where the person will be on all fours facing away from
+    rack and will have the bar set slightly higher than their back. They will connect their foot and bar and will drive the bar up behind them straight to the ceiling. This will look like a straight
+    kick towards the ceiling while on all fours</string>
 
     <string name="GluteBridge">Glute Bridge</string>
-    <string name="GluteBridgeDescription">Glute Bridge</string>
+    <string name="GluteBridgeDescription">The glute bridge is similar to the barbell hip thrusts in which the persons upper back remains flat on the ground and they thrust their hips up in this position
+    while keeping feet firmly planted on the ground</string>
 
     <string name="MachineHipAbduction">Machine Hip Abduction</string>
-    <string name="MachineHipAbductionDescription">Machine Hip Abduction</string>
+    <string name="MachineHipAbductionDescription">The hip abduction machine is a machine in which the person sets a weight resistance to use and will sit in the machine with the resistance pads
+    on the outer part of each leg. They will then push against the pads spreading their legs and driving the weight out and away from themselves.</string>
 
 
     Strings for Hamstring Exercises
     <string name="StandingLunge">Standing Lunge</string>
-    <string name="StandingLungeDescription">Standing Lunge </string>
+    <string name="StandingLungeDescription">The person will being in a standing position and stepping forward with one leg while dropping the other leg down to the ground and then standing up,
+    taking a step with the leg that was lowered while dropping the alternating leg down to the ground and continue this pattern for a certain time or distance</string>
 
     <string name="LegCurl">Leg Curl</string>
-    <string name="LegCurlDescription">Leg Curl</string>
+    <string name="LegCurlDescription">The leg curl is performed on a machine in which the person loads weight on that they can o without injury. They will lay flat on their stomach and will put their
+    feet under the pads. They will then curl their legs upwards to their lower part of the body. When they have gotten as far as they can they will extend their legs out again and return to the
+    starting position</string>
 
     <string name="RomanianDeadlift">Romanian Deadlift</string>
-    <string name="RomanianDeadliftDescription">Romanian Deadlift</string>
+    <string name="RomanianDeadliftDescription">The romanian deadlift is a variation of the deadlift in which the legs of the person stay straight and slightly bent the entire time to where the
+    hamstrings are engaged much more than the lower back</string>
 
     <string name="SeatedLegCurl">Seated Leg Curl</string>
-    <string name="SeatedLegCurlDescription">Seated Leg Curl</string>
+    <string name="SeatedLegCurlDescription">The seated leg curl is a variation of the leg curl machine in which the user is sitting down with their legs on top of the resistance padded part. The user
+    will hold onto the handles on the side of the machine while curling their legs down towards the ground and then returning to the starting position</string>
 
     <string name="ElevatedDeadlift">Elevated Deadlift</string>
-    <string name="ElevatedDeadliftDescription">Elevated Deadlift</string>
+    <string name="ElevatedDeadliftDescription">The elevated deadlift is another variation of deadlift in which the person stands on top of weight plates or anything elevating them off of the ground,
+    making this deadlift a longer movement than the traditional deadlift is</string>
 
     <string name="SingleLegHamstringCurl">Single Leg Hamstring Curl</string>
-    <string name="SingleLegHamstringCurlDescription">Single Leg Hamstring Curl</string>
+    <string name="SingleLegHamstringCurlDescription">The single leg hamstring curl is a variation of the hamstring curls in which only one leg is engaged in the movement at a time</string>
 
 
     Strings for Calves Exercises
     <string name="LegPressCalfRaise">Leg Press Calf Raise</string>
-    <string name="LegPressCalfRaiseDescription">Leg Press Calf Raise</string>
+    <string name="LegPressCalfRaiseDescription">The person will get into a leg press machine and have their feet positioned on the lower part of the footing platform. They will lower their feet
+    off of the platform until only the ball of their foot is connected and then will push this weight up with the ball of their foot flexing the calves at the top then releasing, letting
+    the weight come back to them and locking out again</string>
 
     <string name="DonkeyCalfRaise">Donkey Calf Raise</string>
-    <string name="DonkeyCalfRaiseDescription">Donkey Calf Raise</string>
+    <string name="DonkeyCalfRaiseDescription">The donkey calf raise is an exercise in which the person will elevate themselves with a platfrom while bending over and leaning on another object. While
+    bent over they will raise themselves using the ball of their foot and flexing the calves, then releasing and lowering themselves back down onto the platform</string>
 
     <string name="SeatedCalfRaise">Seated Calf Raise</string>
-    <string name="SeatedCalfRaiseDescription">Seated Calf Raise</string>
+    <string name="SeatedCalfRaiseDescription">The seated calf raise is a calf raise in which the user is sitting down and has a pad on top of the quads. They will load weight onto this device and
+    when ready will use the ball of their feet to push against the pads, raising the device off of the ground and then lowering the device back to the starting position</string>
 
     <string name="SmithMachineCalfRaise">Smith Machine Calf Raise</string>
-    <string name="SmithMachineCalfRaiseDescription">Smith Machine Calf Raise</string>
+    <string name="SmithMachineCalfRaiseDescription">This calf raise is performed on a smith machine is which the user will lie flat on their back with the ball of their feet placed on the bar connected
+    to the smith machine. They will then push this bar up with towards the ceiling, using only the ball of their foot to do so and will then return back down to the starting position</string>
 
-    <string name="StandingBarbbellCalfRaise">Standing Barbbell Calf Raise</string>
-    <string name="StandingBarbbellCalfRaiseDescription">Standing Barbbell Calf Raise</string>
+    <string name="StandingBarbellCalfRaise">Standing Barbell Calf Raise</string>
+    <string name="StandingBarbellCalfRaiseDescription">The user will perform this calf raise in the standing position with a barbell on their back</string>
 
     <string name="StandingDumbbellCalfRaise">Standing Dumbbell Calf Raise</string>
-    <string name="StandingDumbbellCalfRaiseDescription">Standing Dumbbell Calf Raise</string>
+    <string name="StandingDumbbellCalfRaiseDescription">This calf raise will be done with dumbbells in each hand while in the standing position</string>
 
 
     -- Strings for next and back buttons --
