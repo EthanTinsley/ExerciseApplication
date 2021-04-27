@@ -17,6 +17,8 @@ public class NewWorkout extends AppCompatActivity {
     String Title , Description , Stretches ;
     Workout CreatedWorkout ;
 
+    protected Button BackButton ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,6 @@ public class NewWorkout extends AppCompatActivity {
         WorkoutTitle = (EditText) findViewById(R.id.NewWorkoutTitleEditText);
         WorkoutDescription = (EditText) findViewById(R.id.DescriptionEditText);
         WorkoutStretches = (EditText) findViewById(R.id.StretchesEditText);
-
 
 
 
@@ -54,6 +55,15 @@ public class NewWorkout extends AppCompatActivity {
             }
         });
 
+        // Back Button and Action Listener
+        BackButton = (Button) findViewById(R.id.NewWorkoutBackButton);
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent GoBack = new Intent(v.getContext() , MainActivity.class);
+                startActivityForResult(GoBack, 0);
+            }
+        });
 
     }
 }

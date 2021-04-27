@@ -22,16 +22,29 @@ public class MuscleGroupSelection extends AppCompatActivity {
     protected Button HamstringsExercises ;
     protected Button CalvesExercises ;
 
+    protected Button BackButton ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_muscle_group_selection);
+
 
         // boolean determines if user is currently building a workout or not
         buildingWorkout  = getIntent().getBooleanExtra("BuildingWorkout", false) ;
 
         //if user is building a workout then get the title of the workout
         if (buildingWorkout == true) WorkoutTitle = getIntent().getStringExtra("WorkoutTitle") ;
+
+        // Back Button and Action Listener
+        BackButton = (Button) findViewById(R.id.MuscleBackButton);
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent GoBack = new Intent(v.getContext() , MainActivity.class);
+                startActivityForResult(GoBack, 0);
+            }
+        });
 
 
         ShoulderExercises = (Button) findViewById(R.id.ShouldersButton) ;

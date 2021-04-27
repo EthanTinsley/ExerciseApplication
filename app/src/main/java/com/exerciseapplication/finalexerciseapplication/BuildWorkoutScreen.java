@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -49,6 +50,27 @@ public class BuildWorkoutScreen extends AppCompatActivity {
                 BuildWorkoutIntent.putExtra("WorkoutTitle", WorkoutTitle);
                 BuildWorkoutIntent.putExtra("BuildingWorkout", true) ;
                 startActivityForResult(BuildWorkoutIntent, 0);
+            }
+        });
+        
+        Button SaveWorkout = (Button) findViewById(R.id.BuildWorkoutButton);
+        SaveWorkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(BuildWorkoutScreen.this, "Workout Saved!", Toast.LENGTH_SHORT).show();
+                
+                Intent GoBack = new Intent(v.getContext() , MainActivity.class);
+                startActivityForResult(GoBack, 0);
+            }
+        });
+
+        // Back Button and Action Listener
+        Button BackButton = (Button) findViewById(R.id.BuildWorkoutBackButton);
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent GoBack = new Intent(v.getContext() , MainActivity.class);
+                startActivityForResult(GoBack, 0);
             }
         });
 

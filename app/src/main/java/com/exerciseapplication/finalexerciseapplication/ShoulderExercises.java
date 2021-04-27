@@ -189,5 +189,15 @@ public class ShoulderExercises extends AppCompatActivity {
                 startActivityForResult(Exercise,0);
             }
         });
+
+        // Back Button and Action Listener
+        Button BackButton = (Button) findViewById(R.id.ShoulderBackButton);
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent GoBack = new Intent(v.getContext() , MainActivity.class);
+                startActivityForResult(GoBack, 0);
+            }
+        });
     }
 }

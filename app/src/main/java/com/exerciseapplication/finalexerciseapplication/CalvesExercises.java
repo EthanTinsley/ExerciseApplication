@@ -165,6 +165,16 @@ public class CalvesExercises extends AppCompatActivity {
             }
         });
 
+        // Back Button and Action Listener
+        Button BackButton = (Button) findViewById(R.id.CalvesBackButton);
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent GoBack = new Intent(v.getContext() , MainActivity.class);
+                startActivityForResult(GoBack, 0);
+            }
+        });
+
     }
 
 
